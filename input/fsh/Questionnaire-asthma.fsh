@@ -37,7 +37,7 @@ Usage: #example
 * item[=].code = $sct#713838004 "optimaliseren van medicatie"
 * item[=].type = #choice
 * item[=].answerOption[0].valueCoding = $sct#373066001 "ja, instel / titratiefase"
-// * item[=].answerOption[=].initialSelected = true
+* item[=].answerOption[=].initialSelected = true
 * item[=].answerOption[+].valueCoding = $sct#373067005 "nee, bestaande patient"
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
