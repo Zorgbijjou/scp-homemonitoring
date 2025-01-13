@@ -29,15 +29,15 @@
     "fshType": "Instance",
     "fshFile": "Questionnaire-asthma.fsh",
     "startLine": 1,
-    "endLine": 68
+    "endLine": 124
   },
   {
     "outputFile": "Questionnaire-zbj-telemonitoring-heartfailure-enrollment-assertions.json",
     "fshName": "zbj-telemonitoring-heartfailure-enrollment-assertions",
     "fshType": "Instance",
     "fshFile": "Questionnaire-heartfailure.fsh",
-    "startLine": 143,
-    "endLine": 262
+    "startLine": 147,
+    "endLine": 266
   },
   {
     "outputFile": "Questionnaire-zbj-telemonitoring-heartfailure-enrollment.json",
@@ -45,6 +45,6 @@
     "fshType": "Instance",
     "fshFile": "Questionnaire-heartfailure.fsh",
     "startLine": 1,
-    "endLine": 138
+    "endLine": 142
   }
 ]
