@@ -132,13 +132,15 @@
         }
       ],
       "type": "choice",
+      "required": true,
       "answerOption": [
         {
           "valueCoding": {
             "code": "373066001",
             "system": "http://snomed.info/sct",
             "display": "ja, instel / titratiefase"
-          }
+          },
+          "initialSelected": true
         },
         {
           "valueCoding": {

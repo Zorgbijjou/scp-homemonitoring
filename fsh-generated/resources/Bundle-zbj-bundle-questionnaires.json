@@ -171,19 +171,6 @@
             ],
             "item": [
               {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
-                        }
-                      ]
-                    }
-                  }
-                ],
                 "linkId": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
                 "text": "Titratie",
                 "code": [
@@ -203,9 +190,7 @@
                       "display": "ja, titratie"
                     }
                   }
-                ]
-              },
-              {
+                ],
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -218,7 +203,9 @@
                       ]
                     }
                   }
-                ],
+                ]
+              },
+              {
                 "linkId": "dcba2829-32d8-4390-b1d4-32a5fefda539",
                 "text": "Recompensatie",
                 "code": [
@@ -238,6 +225,19 @@
                       "display": "ja, recompensatie"
                     }
                   }
+                ],
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "code": "check-box",
+                          "system": "http://hl7.org/fhir/questionnaire-item-control"
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
             ]
@@ -254,6 +254,17 @@
             ],
             "item": [
               {
+                "linkId": "4e973bcb-bbbb-4a9f-877b-fbf45ab94361",
+                "text": "Streefgewicht",
+                "required": true,
+                "type": "decimal",
+                "code": [
+                  {
+                    "code": "1078215008",
+                    "system": "http://snomed.info/sct",
+                    "display": "Target body weight"
+                  }
+                ],
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
@@ -267,33 +278,9 @@
                     "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
                     "valueString": "Streefgewicht '0.0'"
                   }
-                ],
-                "linkId": "4e973bcb-bbbb-4a9f-877b-fbf45ab94361",
-                "text": "Streefgewicht",
-                "required": true,
-                "type": "decimal",
-                "code": [
-                  {
-                    "code": "1078215008",
-                    "system": "http://snomed.info/sct",
-                    "display": "Target body weight"
-                  }
                 ]
               },
               {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
-                        }
-                      ]
-                    }
-                  }
-                ],
                 "linkId": "135aec2f-e410-4668-9a26-f745dc1789af",
                 "text": "Ziekenhuispatiënt",
                 "code": [
@@ -313,9 +300,7 @@
                       "display": "ja, patiënt is opgenomen geweest"
                     }
                   }
-                ]
-              },
-              {
+                ],
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -328,7 +313,9 @@
                       ]
                     }
                   }
-                ],
+                ]
+              },
+              {
                 "linkId": "345ca4a3-1bc8-4358-8d78-783c05953261",
                 "text": "Apparatuur beschikbaar",
                 "code": [
@@ -349,15 +336,22 @@
                       "display": "ja, patiënt beschikt over een weegschaal en bloeddrukmeter (of is bereid deze aan te schaffen)"
                     }
                   }
+                ],
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "code": "check-box",
+                          "system": "http://hl7.org/fhir/questionnaire-item-control"
+                        }
+                      ]
+                    }
+                  }
                 ]
               },
               {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Notitie (optioneel)"
-                  }
-                ],
                 "linkId": "be4b671d-f91f-4fc3-a6d8-fcafa8e67161",
                 "text": "Notitie",
                 "code": [
@@ -368,7 +362,13 @@
                   }
                 ],
                 "type": "text",
-                "repeats": false
+                "repeats": false,
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                    "valueString": "Notitie (optioneel)"
+                  }
+                ]
               }
             ]
           },
@@ -393,19 +393,6 @@
             ],
             "item": [
               {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
-                        }
-                      ]
-                    }
-                  }
-                ],
                 "linkId": "295a22d7-d0ff-4546-b2a0-ce46beeba086",
                 "text": "Moeite met apps",
                 "code": [
@@ -423,6 +410,19 @@
                       "code": "373066001",
                       "system": "http://snomed.info/sct",
                       "display": "ja, patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
+                    }
+                  }
+                ],
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "code": "check-box",
+                          "system": "http://hl7.org/fhir/questionnaire-item-control"
+                        }
+                      ]
                     }
                   }
                 ]
@@ -571,13 +571,15 @@
               }
             ],
             "type": "choice",
+            "required": true,
             "answerOption": [
               {
                 "valueCoding": {
                   "code": "373066001",
                   "system": "http://snomed.info/sct",
                   "display": "ja, instel / titratiefase"
-                }
+                },
+                "initialSelected": true
               },
               {
                 "valueCoding": {
