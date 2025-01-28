@@ -1,7 +1,7 @@
 Output File                                                               Name                                                   Type      FSH File                        Lines
-Bundle-zbj-bundle-healthcareservices.json                                 zbj-bundle-healthcareservices                          Instance  HealthcareService.fsh           41 - 47
+Bundle-zbj-bundle-healthcareservices.json                                 zbj-bundle-healthcareservices                          Instance  HealthcareService.fsh           42 - 48
 Bundle-zbj-bundle-questionnaires.json                                     zbj-bundle-questionnaires                              Instance  Questionnaire.fsh               1 - 8
-HealthcareService-zbj-healthcareservice-telemonitoring.json               zbj-healthcareservice-telemonitoring                   Instance  HealthcareService.fsh           1 - 19
+HealthcareService-zbj-healthcareservice-telemonitoring.json               zbj-healthcareservice-telemonitoring                   Instance  HealthcareService.fsh           1 - 20
 Questionnaire-zbj-telemonitoring-asthma-enrollment.json                   zbj-telemonitoring-asthma-enrollment                   Instance  Questionnaire-asthma.fsh        1 - 124
 Questionnaire-zbj-telemonitoring-heartfailure-enrollment-assertions.json  zbj-telemonitoring-heartfailure-enrollment-assertions  Instance  Questionnaire-heartfailure.fsh  147 - 266
 Questionnaire-zbj-telemonitoring-heartfailure-enrollment.json             zbj-telemonitoring-heartfailure-enrollment             Instance  Questionnaire-heartfailure.fsh  1 - 142

@@ -14,6 +14,7 @@ Description: "Defines which services are provided by the HealthcareService for t
 * type[+] = $sct#716358000 "monitoren van chronische obstructieve longziekte via telegeneeskunde (regime/therapie)" 
 * type[+] = $sct#84114007 "hartfalen (aandoening)"
 * type[+] = $sct#195979001 "Asthma unspecified (disorder)"
+* type[+] = $sct#195967001 "astma (aandoening)"
 * type[+] = $sct#304527002 "acuut astma (aandoening)"
 * type[+] = $sct#389145006 "allergisch astma (aandoening)"
 * type[+] = $sct#13645005 "chronische obstructieve longaandoening (aandoening)"
