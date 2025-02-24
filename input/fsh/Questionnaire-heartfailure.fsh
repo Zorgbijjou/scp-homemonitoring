@@ -5,7 +5,7 @@ Usage: #example
 //* contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor aanmelding van patienten met hartfalen voor telemonitoring"
-* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-heartfailure-enrollment|0.3"
+* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-heartfailure-enrollment|0.4"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:ca893f5c-2868-4349-bc0f-66f67d4ab3a2"
 * status = #active
@@ -46,6 +46,11 @@ Usage: #example
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $sct#255299009
 
+* item[=].item[+].linkId = "e0163609-a771-44c8-88e0-1c3bbeff2028"
+* item[=].item[=].text = "Selecteer titratie en/of recompensatie"
+* item[=].item[=].type = #display
+* item[=].item[=].required = true
+
 * item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
 * item[=].item[=].text = "Titratie"
 * item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
@@ -78,9 +83,17 @@ Usage: #example
 
 * item[+].linkId = "170292e5-3163-43b4-88af-affb3e4c27ab"
 * item[=].type = #group
-* item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
-* item[=].enableWhen.operator = #exists
-* item[=].enableWhen.answerBoolean = true
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#58158008
+* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableBehavior = #any
+
 
 * item[=].item[+].linkId = "4e973bcb-bbbb-4a9f-877b-fbf45ab94361"
 * item[=].item[=].text = "Streefgewicht"
@@ -127,9 +140,16 @@ Usage: #example
 * item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-style"
 * item[=].text.extension[=].valueString = "font-size: 1.25rem;"
 * item[=].type = #group
-* item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
-* item[=].enableWhen.operator = #exists
-* item[=].enableWhen.answerBoolean = true
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#58158008
+* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableBehavior = #any
 
 
 * item[=].item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
