@@ -406,8 +406,8 @@
                         "valueCodeableConcept": {
                           "coding": [
                             {
-                              "system": "http://hl7.org/fhir/questionnaire-display-category",
-                              "code": "instructions"
+                              "code": "instructions",
+                              "system": "http://hl7.org/fhir/questionnaire-display-category"
                             }
                           ]
                         }

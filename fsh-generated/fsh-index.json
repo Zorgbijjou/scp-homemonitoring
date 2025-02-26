@@ -36,8 +36,8 @@
     "fshName": "zbj-telemonitoring-heartfailure-enrollment-assertions",
     "fshType": "Instance",
     "fshFile": "Questionnaire-heartfailure.fsh",
-    "startLine": 173,
-    "endLine": 292
+    "startLine": 172,
+    "endLine": 291
   },
   {
     "outputFile": "Questionnaire-zbj-telemonitoring-heartfailure-enrollment.json",
@@ -45,6 +45,6 @@
     "fshType": "Instance",
     "fshFile": "Questionnaire-heartfailure.fsh",
     "startLine": 1,
-    "endLine": 168
+    "endLine": 167
   }
 ]
