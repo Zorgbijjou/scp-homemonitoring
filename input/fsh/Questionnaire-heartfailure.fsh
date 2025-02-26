@@ -134,6 +134,12 @@ Usage: #example
 * item[=].item[=].repeats = false
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].item[=].extension.valueString = "Notitie (optioneel)"
+* item[=].item[=].item[+].linkId = "c230b150-c66f-4892-b9f6-5fff067962ee"
+* item[=].item[=].item[=].text = "Voorbeelden: patiënt is slechthorend, patiënt wordt geholpen door mantelzorger."
+* item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept.coding.system = "http://hl7.org/fhir/questionnaire-display-category"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept.coding.code = #instructions
 
 * item[+].linkId = "2bc0b73f-506a-48a4-994d-fe355a5825f3"
 * item[=].text = "Begeleiding bij onboarding"

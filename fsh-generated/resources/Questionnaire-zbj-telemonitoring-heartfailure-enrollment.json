@@ -388,6 +388,26 @@
               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
               "valueString": "Notitie (optioneel)"
             }
+          ],
+          "item": [
+            {
+              "linkId": "c230b150-c66f-4892-b9f6-5fff067962ee",
+              "text": "Voorbeelden: patiënt is slechthorend, patiënt wordt geholpen door mantelzorger.",
+              "type": "display",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                        "code": "instructions"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
           ]
         }
       ]
