@@ -280,40 +280,6 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "check-box",
-                    "system": "http://hl7.org/fhir/questionnaire-item-control"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "345ca4a3-1bc8-4358-8d78-783c05953261",
-          "code": [
-            {
-              "code": "404684003",
-              "system": "http://snomed.info/sct",
-              "display": "klinische bevinding (bevinding)"
-            }
-          ],
-          "type": "choice",
-          "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "735333005",
-                "system": "http://snomed.info/sct",
-                "display": "De patiënt beschikt over een weegschaal en bloeddrukmeter (of is bereid deze aan te schaffen)"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
               "valueString": "Notitie  (optioneel)"
             }
