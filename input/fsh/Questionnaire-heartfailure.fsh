@@ -115,18 +115,6 @@ Usage: #example
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
-
-* item[=].item[+].linkId = "345ca4a3-1bc8-4358-8d78-783c05953261"
-* item[=].item[=].text = "Apparatuur beschikbaar"
-* item[=].item[=].code = $sct#735333005 "apparatuur beschikbaar"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, patiënt beschikt over een weegschaal en bloeddrukmeter (of is bereid deze aan te schaffen)"
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#check-box
-
-
 * item[=].item[+].linkId = "be4b671d-f91f-4fc3-a6d8-fcafa8e67161"
 * item[=].item[=].text = "Notitie"
 * item[=].item[=].code = $sct#11221000146107 "notitie (gegevensobject)"
@@ -254,14 +242,6 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
 * item[=].item[=].answerOption[+].valueCoding = $sct#266938001 "De patiënt is opgenomen geweest"
-
-* item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#check-box
-* item[=].item[=].linkId = "345ca4a3-1bc8-4358-8d78-783c05953261"
-* item[=].item[=].code = $sct#404684003 "klinische bevinding (bevinding)"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].answerOption.valueCoding = $sct#735333005 "De patiënt beschikt over een weegschaal en bloeddrukmeter (of is bereid deze aan te schaffen)"
 
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].item[=].extension.valueString = "Notitie  (optioneel)"
