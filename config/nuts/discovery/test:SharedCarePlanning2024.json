@@ -12,7 +12,8 @@
       },
       "jwt_vc": {
         "alg": [
-          "ES256"
+          "ES256",
+          "PS512"
         ]
       },
       "ldp_vp": {
@@ -28,8 +29,8 @@
     },
     "input_descriptors": [
       {
-        "id": "id_nuts_ura_credential",
-        "name": "Care organization",
+        "id": "id_uzicert_uracredential",
+        "name": "Care organization identity from CIBG-issued UZI-server certificate",
         "purpose": "Finding a care organization for authorizing access to medical metadata.",
         "constraints": {
           "fields": [
@@ -39,14 +40,14 @@
               ],
               "filter": {
                 "type": "string",
-                "const": "NutsUraCredential"
+                "const": "UziServerCertificateCredential"
               }
             },
             {
               "id": "organization_name",
               "path": [
-                "$.credentialSubject.organization.name",
-                "$.credentialSubject[0].organization.name"
+                "$.credentialSubject.O",
+                "$.credentialSubject[0].O"
               ],
               "filter": {
                 "type": "string"
@@ -55,8 +56,19 @@
             {
               "id": "organization_ura",
               "path": [
-                "$.credentialSubject.organization.ura",
-                "$.credentialSubject[0].organization.ura"
+                "$.credentialSubject.otherName",
+                "$.credentialSubject[0].otherName"
+              ],
+              "filter": {
+                "type": "string",
+                "pattern": "^[0-9.]+-\\d+-\\d+-S-(\\d+)-00\\.000-\\d+$"
+              }
+            },
+            {
+              "id": "organization_city",
+              "path": [
+                "$.credentialSubject.L",
+                "$.credentialSubject[0].L"
               ],
               "filter": {
                 "type": "string"
@@ -81,33 +93,30 @@
               }
             },
             {
-              "id": "authServerURL",
+              "id": "authorization_server_url",
               "purpose": "Used by clients to request OAuth2 access tokens.",
               "path": [
-                "$.credentialSubject.authServerURL",
-                "$.credentialSubject[0].authServerURL"
+                "$.credentialSubject.authServerURL"
               ],
               "filter": {
                 "type": "string"
               }
             },
             {
-              "id": "fhirBaseURL",
+              "id": "fhir_base_url",
               "purpose": "Base URL of the Care Plan Contributor's FHIR API provided by the SCP-node.",
               "path": [
-                "$.credentialSubject.fhirBaseURL",
-                "$.credentialSubject[0].fhirBaseURL"
+                "$.credentialSubject.fhirBaseURL"
               ],
               "filter": {
                 "type": "string"
               }
             },
             {
-              "id": "fhirNotificationURL",
+              "id": "fhir_notification_url",
               "purpose": "FHIR subscription REST channel endpoint, issued by SCP-nodes notify about FHIR resources.",
               "path": [
-                "$.credentialSubject.fhirNotificationURL",
-                "$.credentialSubject[0].fhirNotificationURL"
+                "$.credentialSubject.fhirNotificationURL"
               ],
               "filter": {
                 "type": "string"
