@@ -5,7 +5,7 @@ Usage: #example
 // * contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor aanmelding van patienten met astma voor telemonitoring"
-* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.2"
+* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.3"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:503d6f64-27af-4480-ad99-e357cea2decb"
 * status = #active
@@ -13,8 +13,8 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "https://zorgbijjou.nl"
 * experimental = false
-* date = "2024-12-23"
-* effectivePeriod.start = "2024-12-23"
+* date = "2025-03-29"
+* effectivePeriod.start = "2025-03-29"
 * useContext[0].code = $usage-context-type#task
 * useContext[=].valueCodeableConcept = $v3-ActCode#OE "order entry task"
 * useContext[+].code = $usage-context-type#focus
@@ -33,43 +33,46 @@ Usage: #example
 * item[=].answerOption[=].initialSelected = true
 
 * item[+].linkId = "da65ffd8-fb90-4918-becf-dfe0439577d8"
-* item[=].text = "Instel / titratiefase"
-* item[=].code = $sct#713838004 "optimaliseren van medicatie"
+* item[=].text = "Protocol"
 * item[=].type = #choice
 * item[=].required = true
-* item[=].answerOption[0].valueCoding = $sct#373066001 "ja, instel / titratiefase"
+* item[=].answerOption[0].valueString = "Instel / titratiefase (nieuwe patienten)"
 * item[=].answerOption[=].initialSelected = true
-* item[=].answerOption[+].valueCoding = $sct#373067005 "nee, bestaande patient"
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-* item[=].extension[=].valueCode = #horizontal
+* item[=].answerOption[+].valueString = "Astma - wekelijks"
+* item[=].answerOption[+].valueString = "Astma - maandelijks"
+* item[=].answerOption[+].valueString = "Biologicals - wekelijks"
+* item[=].answerOption[+].valueString = "Biologicals - maandelijks"
+* item[=].answerOption[+].valueString = "Biologicals - remissie"
+// * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+// * item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
+// * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
+// * item[=].extension[=].valueCode = #vertical
 
-* item[+].linkId = "4b2e2ce0-37c5-4240-a733-872836382c5b" //extra-parameters
-* item[=].type = #group
-* item[=].enableWhen.question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
-* item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = $sct#373067005
+// * item[+].linkId = "4b2e2ce0-37c5-4240-a733-872836382c5b" //extra-parameters
+// * item[=].type = #group
+// * item[=].enableWhen.question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+// * item[=].enableWhen.operator = #=
+// * item[=].enableWhen.answerCoding = $sct#373067005
 
-* item[=].item[+].linkId = "6635f5c1-8ed0-44ad-ad3d-8f763b9ca123"
-* item[=].item[=].text = "Biologicals"
-* item[=].item[=].code = $sct#76334006 "immunotherapie"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, biologicals"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
+// * item[=].item[+].linkId = "6635f5c1-8ed0-44ad-ad3d-8f763b9ca123"
+// * item[=].item[=].text = "Biologicals"
+// * item[=].item[=].code = $sct#76334006 "immunotherapie"
+// * item[=].item[=].type = #choice
+// * item[=].item[=].repeats = true
+// * item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, biologicals"
+// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
-* item[=].item[+].linkId = "fd9da7fd-aab7-4dc4-8ca5-6b70c1c671df"
-* item[=].item[=].text = "Frequentie"
-* item[=].item[=].code = $sct#307459002 "frequentie interval"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $sct#14497002 "wekelijks"
-* item[=].item[=].answerOption[+].valueCoding = $sct#89185003 "maandelijks"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-* item[=].item[=].extension[=].valueCode = #horizontal
+// * item[=].item[+].linkId = "fd9da7fd-aab7-4dc4-8ca5-6b70c1c671df"
+// * item[=].item[=].text = "Frequentie"
+// * item[=].item[=].code = $sct#307459002 "frequentie interval"
+// * item[=].item[=].type = #choice
+// * item[=].item[=].answerOption[0].valueCoding = $sct#14497002 "wekelijks"
+// * item[=].item[=].answerOption[+].valueCoding = $sct#89185003 "maandelijks"
+// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
+// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
+// * item[=].item[=].extension[=].valueCode = #horizontal
 
 * item[+].linkId = "7cc84231-040b-49b4-beff-64ca901f776c" //extra-parameters
 * item[=].type = #group
