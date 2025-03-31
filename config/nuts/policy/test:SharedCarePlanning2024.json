@@ -9,7 +9,8 @@
         },
         "jwt_vc": {
           "alg": [
-            "ES256"
+            "ES256",
+            "PS256"
           ]
         },
         "ldp_vp": {
@@ -23,13 +24,13 @@
           ]
         }
       },
-      "id": "pd_any_care_organization_with_employee",
-      "name": "Care organization with employee",
-      "purpose": "Finding a care organization with logged in user for authorizing access to medical metadata",
+      "id": "pd_any_care_organization",
+      "name": "Care organization",
+      "purpose": "Finding a care organization",
       "input_descriptors": [
         {
-          "id": "id_nuts_ura_credential",
-          "name": "Care organization",
+          "id": "id_uzicert_uracredential",
+          "name": "Care organization identity from CIBG-issued UZI-server certificate",
           "purpose": "Finding a care organization for authorizing access to medical metadata.",
           "constraints": {
             "fields": [
@@ -39,14 +40,13 @@
                 ],
                 "filter": {
                   "type": "string",
-                  "const": "NutsUraCredential"
+                  "const": "X509Credential"
                 }
               },
               {
                 "id": "organization_name",
                 "path": [
-                  "$.credentialSubject.organization.name",
-                  "$.credentialSubject[0].organization.name"
+                  "$.credentialSubject[0].subject.O"
                 ],
                 "filter": {
                   "type": "string"
@@ -55,18 +55,17 @@
               {
                 "id": "organization_ura",
                 "path": [
-                  "$.credentialSubject.organization.ura",
-                  "$.credentialSubject[0].organization.ura"
+                  "$.credentialSubject[0].san.otherName"
                 ],
                 "filter": {
-                  "type": "string"
+                  "type": "string",
+                  "pattern": "^[0-9.]+-\\d+-\\d+-S-(\\d+)-00\\.000-\\d+$"
                 }
               },
               {
                 "id": "organization_city",
                 "path": [
-                  "$.credentialSubject.organization.city",
-                  "$.credentialSubject[0].organization.city"
+                  "$.credentialSubject[0].subject.L"
                 ],
                 "filter": {
                   "type": "string"
