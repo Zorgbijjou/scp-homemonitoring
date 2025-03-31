@@ -5,20 +5,9 @@
   "presentation_definition": {
     "id": "test:SharedCarePlanning2024",
     "format": {
-      "ldp_vc": {
-        "proof_type": [
-          "JsonWebSignature2020"
-        ]
-      },
       "jwt_vc": {
         "alg": [
-          "ES256",
           "PS256"
-        ]
-      },
-      "ldp_vp": {
-        "proof_type": [
-          "JsonWebSignature2020"
         ]
       },
       "jwt_vp": {
@@ -46,7 +35,8 @@
             {
               "id": "organization_name",
               "path": [
-                "$.credentialSubject[0].subject.O"
+                "$.credentialSubject[0].subject.O",
+                "$.credentialSubject.subject.O"
               ],
               "filter": {
                 "type": "string"
@@ -55,7 +45,8 @@
             {
               "id": "organization_ura",
               "path": [
-                "$.credentialSubject[0].san.otherName"
+                "$.credentialSubject[0].san.otherName",
+                "$.credentialSubject.san.otherName"
               ],
               "filter": {
                 "type": "string",
@@ -65,7 +56,8 @@
             {
               "id": "organization_city",
               "path": [
-                "$.credentialSubject[0].subject.L"
+                "$.credentialSubject[0].subject.L",
+                "$.credentialSubject.subject.L"
               ],
               "filter": {
                 "type": "string"
@@ -93,6 +85,7 @@
               "id": "authorization_server_url",
               "purpose": "Used by clients to request OAuth2 access tokens.",
               "path": [
+                "$.credentialSubject[0].authServerURL",
                 "$.credentialSubject.authServerURL"
               ],
               "filter": {
@@ -103,6 +96,7 @@
               "id": "fhir_base_url",
               "purpose": "Base URL of the Care Plan Contributor's FHIR API provided by the SCP-node.",
               "path": [
+                "$.credentialSubject[0].fhirBaseURL",
                 "$.credentialSubject.fhirBaseURL"
               ],
               "filter": {
@@ -113,6 +107,7 @@
               "id": "fhir_notification_url",
               "purpose": "FHIR subscription REST channel endpoint, issued by SCP-nodes notify about FHIR resources.",
               "path": [
+                "$.credentialSubject[0].fhirNotificationURL",
                 "$.credentialSubject.fhirNotificationURL"
               ],
               "filter": {
