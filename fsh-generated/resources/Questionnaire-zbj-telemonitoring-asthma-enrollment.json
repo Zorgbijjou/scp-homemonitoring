@@ -128,7 +128,7 @@
       "required": true,
       "answerOption": [
         {
-          "valueString": "Instel / titratiefase (nieuwe patienten)",
+          "valueString": "Instel / titratiefase",
           "initialSelected": true
         },
         {
