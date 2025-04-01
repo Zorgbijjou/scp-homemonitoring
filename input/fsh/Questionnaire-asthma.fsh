@@ -36,7 +36,7 @@ Usage: #example
 * item[=].text = "Protocol"
 * item[=].type = #choice
 * item[=].required = true
-* item[=].answerOption[0].valueString = "Instel / titratiefase (nieuwe patienten)"
+* item[=].answerOption[0].valueString = "Instel / titratiefase"
 * item[=].answerOption[=].initialSelected = true
 * item[=].answerOption[+].valueString = "Astma - wekelijks"
 * item[=].answerOption[+].valueString = "Astma - maandelijks"
