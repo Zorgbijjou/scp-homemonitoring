@@ -219,7 +219,7 @@
           "linkId": "46854215-f27c-4e70-87e3-e1aff3e713b9",
           "text": "Interval biologicals",
           "required": true,
-          "type": "text",
+          "type": "string",
           "repeats": false,
           "enableWhen": [
             {

@@ -88,7 +88,7 @@ Usage: #example
 * item[=].item[+].linkId = "46854215-f27c-4e70-87e3-e1aff3e713b9" //extra-parameters
 * item[=].item[=].text = "Interval biologicals"
 * item[=].item[=].required = true
-* item[=].item[=].type = #text
+* item[=].item[=].type = #string
 * item[=].item[=].repeats = false
 * item[=].item[=].enableWhen.question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
 * item[=].item[=].enableWhen.operator = #=
