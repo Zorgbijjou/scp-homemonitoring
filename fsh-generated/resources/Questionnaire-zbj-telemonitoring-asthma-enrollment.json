@@ -11,7 +11,7 @@
   },
   "language": "nl-NL",
   "title": "Vragenlijst voor aanmelding van patienten met astma voor telemonitoring",
-  "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.3",
+  "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.4",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
@@ -31,9 +31,9 @@
     }
   ],
   "experimental": false,
-  "date": "2025-03-29",
+  "date": "2025-05-19",
   "effectivePeriod": {
-    "start": "2025-03-29"
+    "start": "2025-05-21"
   },
   "useContext": [
     {
@@ -168,7 +168,7 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Plak hier het LAAP uit het EPD"
+              "valueString": "Plak hier het LAAP uit het EPD (inclusief rescuemedicatie, onderhoudsmedicatie...)"
             }
           ]
         },
@@ -192,8 +192,52 @@
           ]
         },
         {
+          "linkId": "28755b2e-7fb4-4f4a-a104-4a7cbdf4eea6",
+          "text": "Startdatum biological",
+          "required": true,
+          "type": "date",
+          "enableWhen": [
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - wekelijks"
+            },
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - maandelijks"
+            },
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - remissie"
+            }
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "linkId": "46854215-f27c-4e70-87e3-e1aff3e713b9",
+          "text": "Interval biologicals",
+          "required": true,
+          "type": "text",
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - remissie"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Bijv. 5 weken"
+            }
+          ]
+        },
+        {
           "linkId": "2c1136b1-6f99-444a-b3d3-c0a2521091dd",
-          "text": "Medicatie",
+          "text": "Relevante co-morbiditeit (optioneel)",
           "code": [
             {
               "code": "410942007",
@@ -201,19 +245,18 @@
               "display": "drug of geneesmiddel"
             }
           ],
-          "required": true,
           "type": "text",
           "repeats": false,
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Rescuemedicatie, onderhoudsmedicatie, ..."
+              "valueString": "Allergieën, ... (optioneel)"
             }
           ]
         },
         {
           "linkId": "c758a1da-4938-4f95-abf5-a2956761dcd4",
-          "text": "Notitie",
+          "text": "Notitie (optioneel)",
           "code": [
             {
               "code": "11221000146107",

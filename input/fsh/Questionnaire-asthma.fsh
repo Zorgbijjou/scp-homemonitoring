@@ -5,7 +5,7 @@ Usage: #example
 // * contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor aanmelding van patienten met astma voor telemonitoring"
-* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.3"
+* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.4"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:503d6f64-27af-4480-ad99-e357cea2decb"
 * status = #active
@@ -13,8 +13,8 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "https://zorgbijjou.nl"
 * experimental = false
-* date = "2025-03-29"
-* effectivePeriod.start = "2025-03-29"
+* date = "2025-05-19"
+* effectivePeriod.start = "2025-05-21"
 * useContext[0].code = $usage-context-type#task
 * useContext[=].valueCodeableConcept = $v3-ActCode#OE "order entry task"
 * useContext[+].code = $usage-context-type#focus
@@ -43,36 +43,10 @@ Usage: #example
 * item[=].answerOption[+].valueString = "Biologicals - wekelijks"
 * item[=].answerOption[+].valueString = "Biologicals - maandelijks"
 * item[=].answerOption[+].valueString = "Biologicals - remissie"
-// * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-// * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-// * item[=].extension[=].valueCode = #vertical
 
-// * item[+].linkId = "4b2e2ce0-37c5-4240-a733-872836382c5b" //extra-parameters
-// * item[=].type = #group
-// * item[=].enableWhen.question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
-// * item[=].enableWhen.operator = #=
-// * item[=].enableWhen.answerCoding = $sct#373067005
 
-// * item[=].item[+].linkId = "6635f5c1-8ed0-44ad-ad3d-8f763b9ca123"
-// * item[=].item[=].text = "Biologicals"
-// * item[=].item[=].code = $sct#76334006 "immunotherapie"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].repeats = true
-// * item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, biologicals"
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
-// * item[=].item[+].linkId = "fd9da7fd-aab7-4dc4-8ca5-6b70c1c671df"
-// * item[=].item[=].text = "Frequentie"
-// * item[=].item[=].code = $sct#307459002 "frequentie interval"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].answerOption[0].valueCoding = $sct#14497002 "wekelijks"
-// * item[=].item[=].answerOption[+].valueCoding = $sct#89185003 "maandelijks"
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-// * item[=].item[=].extension[=].valueCode = #horizontal
+
 
 * item[+].linkId = "7cc84231-040b-49b4-beff-64ca901f776c" //extra-parameters
 * item[=].type = #group
@@ -84,7 +58,7 @@ Usage: #example
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = false
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].item[=].extension.valueString = "Plak hier het LAAP uit het EPD"
+* item[=].item[=].extension.valueString = "Plak hier het LAAP uit het EPD (inclusief rescuemedicatie, onderhoudsmedicatie...)"
 
 * item[=].item[+].linkId = "90770491-49f9-4e2e-b629-046fe98f1716"
 * item[=].item[=].text = "Asthma Control Questionnaire score"
@@ -94,17 +68,45 @@ Usage: #example
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].item[=].extension[=].valueString = "ACQ '0.0'"
 
-* item[=].item[+].linkId = "2c1136b1-6f99-444a-b3d3-c0a2521091dd"
-* item[=].item[=].text = "Medicatie"
-* item[=].item[=].code = $sct#410942007 "drug of geneesmiddel"
+* item[=].item[+].linkId = "28755b2e-7fb4-4f4a-a104-4a7cbdf4eea6" //extra-parameters
+* item[=].item[=].text = "Startdatum biological"
+* item[=].item[=].required = true
+* item[=].item[=].type = #date
+* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerString = "Biologicals - wekelijks"
+* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerString = "Biologicals - maandelijks"
+* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerString = "Biologicals - remissie"
+* item[=].item[=].enableBehavior = #any
+// * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+// * item[=].item[=].extension.valueString = ""
+
+* item[=].item[+].linkId = "46854215-f27c-4e70-87e3-e1aff3e713b9" //extra-parameters
+* item[=].item[=].text = "Interval biologicals"
 * item[=].item[=].required = true
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = false
+* item[=].item[=].enableWhen.question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerString = "Biologicals - remissie"
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].item[=].extension.valueString = "Rescuemedicatie, onderhoudsmedicatie, ..."
+* item[=].item[=].extension.valueString = "Bijv. 5 weken"
+
+
+* item[=].item[+].linkId = "2c1136b1-6f99-444a-b3d3-c0a2521091dd"
+* item[=].item[=].text = "Relevante co-morbiditeit (optioneel)"
+* item[=].item[=].code = $sct#410942007 "drug of geneesmiddel"
+* item[=].item[=].type = #text
+* item[=].item[=].repeats = false
+* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].item[=].extension.valueString = "Allergieën, ... (optioneel)"
 
 * item[=].item[+].linkId = "c758a1da-4938-4f95-abf5-a2956761dcd4"
-* item[=].item[=].text = "Notitie"
+* item[=].item[=].text = "Notitie (optioneel)"
 * item[=].item[=].code = $sct#11221000146107 "notitie (gegevensobject)"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = false
