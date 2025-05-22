@@ -122,7 +122,7 @@
       ]
     },
     {
-      "linkId": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+      "linkId": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
       "text": "Protocol",
       "type": "choice",
       "required": true,
@@ -198,17 +198,17 @@
           "type": "date",
           "enableWhen": [
             {
-              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
               "operator": "=",
               "answerString": "Biologicals - wekelijks"
             },
             {
-              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
               "operator": "=",
               "answerString": "Biologicals - maandelijks"
             },
             {
-              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
               "operator": "=",
               "answerString": "Biologicals - remissie"
             }
@@ -223,7 +223,7 @@
           "repeats": false,
           "enableWhen": [
             {
-              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
               "operator": "=",
               "answerString": "Biologicals - remissie"
             }

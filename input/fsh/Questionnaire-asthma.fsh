@@ -32,7 +32,7 @@ Usage: #example
 * item[=].answerOption[0].valueCoding = $sct#195967001 "Astma"
 * item[=].answerOption[=].initialSelected = true
 
-* item[+].linkId = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[+].linkId = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].text = "Protocol"
 * item[=].type = #choice
 * item[=].required = true
@@ -72,13 +72,13 @@ Usage: #example
 * item[=].item[=].text = "Startdatum biological"
 * item[=].item[=].required = true
 * item[=].item[=].type = #date
-* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "Biologicals - wekelijks"
-* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "Biologicals - maandelijks"
-* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "Biologicals - remissie"
 * item[=].item[=].enableBehavior = #any
@@ -90,7 +90,7 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = false
-* item[=].item[=].enableWhen.question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerString = "Biologicals - remissie"
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
