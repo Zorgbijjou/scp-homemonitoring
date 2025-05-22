@@ -593,6 +593,13 @@
           {
             "linkId": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
             "text": "Protocol",
+            "code": [
+              {
+                "code": "362981000",
+                "system": "http://snomed.info/sct",
+                "display": "kwalificatiewaarde"
+              }
+            ],
             "type": "choice",
             "required": true,
             "answerOption": [
