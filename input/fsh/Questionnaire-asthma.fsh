@@ -36,13 +36,13 @@ Usage: #example
 * item[=].text = "Protocol"
 * item[=].type = #choice
 * item[=].required = true
-* item[=].answerOption[0].valueString = "Instel / titratiefase"
+* item[=].answerOption[0].valueCoding = $sct#195967001 "Instel / titratiefase"
 * item[=].answerOption[=].initialSelected = true
-* item[=].answerOption[+].valueString = "Astma - wekelijks"
-* item[=].answerOption[+].valueString = "Astma - maandelijks"
-* item[=].answerOption[+].valueString = "Biologicals - wekelijks"
-* item[=].answerOption[+].valueString = "Biologicals - maandelijks"
-* item[=].answerOption[+].valueString = "Biologicals - remissie"
+* item[=].answerOption[+].valueCoding = $sct#195967001 "Astma - wekelijks"
+* item[=].answerOption[+].valueCoding = $sct#195967001 "Astma - maandelijks"
+* item[=].answerOption[+].valueCoding = $sct#195967001 "Biologicals - wekelijks"
+* item[=].answerOption[+].valueCoding = $sct#195967001 "Biologicals - maandelijks"
+* item[=].answerOption[+].valueCoding = $sct#195967001 "Biologicals - remissie"
 
 
 
