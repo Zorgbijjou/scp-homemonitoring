@@ -17,7 +17,7 @@
         },
         "language": "nl-NL",
         "title": "Vragenlijst voor aanmelding van patienten met hartfalen voor telemonitoring",
-        "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-heartfailure-enrollment|0.4",
+        "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-heartfailure-enrollment|0.5",
         "identifier": [
           {
             "system": "urn:ietf:rfc:3986",
@@ -132,9 +132,9 @@
             "text": "Meetprotocol",
             "code": [
               {
-                "code": "362981000",
+                "code": "243120004",
                 "system": "http://snomed.info/sct",
-                "display": "kwalificatiewaarde"
+                "display": "Protocol question (Regimes and therapies)"
               }
             ],
             "type": "choice",
@@ -480,7 +480,7 @@
         },
         "language": "nl-NL",
         "title": "Vragenlijst voor aanmelding van patienten met astma voor telemonitoring",
-        "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.4",
+        "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.5",
         "identifier": [
           {
             "system": "urn:ietf:rfc:3986",
@@ -592,6 +592,13 @@
           },
           {
             "linkId": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+            "code": [
+              {
+                "code": "243120004",
+                "system": "http://snomed.info/sct",
+                "display": "Protocol question (Regimes and therapies)"
+              }
+            ],
             "text": "Protocol",
             "type": "choice",
             "required": true,

@@ -5,7 +5,7 @@ Usage: #example
 // * contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor aanmelding van patienten met astma voor telemonitoring"
-* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.4"
+* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.5"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:503d6f64-27af-4480-ad99-e357cea2decb"
 * status = #active
@@ -33,6 +33,7 @@ Usage: #example
 * item[=].answerOption[=].initialSelected = true
 
 * item[+].linkId = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].code = $sct#243120004 "Protocol question (Regimes and therapies)"
 * item[=].text = "Protocol"
 * item[=].type = #choice
 * item[=].required = true
