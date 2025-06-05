@@ -128,7 +128,7 @@
         {
           "code": "243120004",
           "system": "http://snomed.info/sct",
-          "display": "Protocol question (Regimes and therapies)"
+          "display": "Protocolvraag (regime/therapie)"
         }
       ],
       "type": "choice",

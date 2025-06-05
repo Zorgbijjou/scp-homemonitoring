@@ -35,7 +35,7 @@ Usage: #example
 * item[+].linkId = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].text = "Meetprotocol"
 //* item[=].code = $sct#362981000 "kwalificatiewaarde"
-* item[=].code = $sct#243120004 "Protocol question (Regimes and therapies)"
+* item[=].code = $sct#243120004 "Protocolvraag (regime/therapie)"
 * item[=].type = #choice
 * item[=].required = true
 * item[=].answerOption[0].valueCoding = $sct#255299009 "Instabiel"
