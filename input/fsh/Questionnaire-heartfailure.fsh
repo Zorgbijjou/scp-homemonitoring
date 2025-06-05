@@ -5,7 +5,7 @@ Usage: #example
 //* contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor aanmelding van patienten met hartfalen voor telemonitoring"
-* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-heartfailure-enrollment|0.4"
+* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-heartfailure-enrollment|0.5"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:ca893f5c-2868-4349-bc0f-66f67d4ab3a2"
 * status = #active
@@ -34,7 +34,8 @@ Usage: #example
 
 * item[+].linkId = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].text = "Meetprotocol"
-* item[=].code = $sct#362981000 "kwalificatiewaarde"
+//* item[=].code = $sct#362981000 "kwalificatiewaarde"
+* item[=].code = $sct#243120004 "Protocolvraag (regime/therapie)"
 * item[=].type = #choice
 * item[=].required = true
 * item[=].answerOption[0].valueCoding = $sct#255299009 "Instabiel"
