@@ -5,7 +5,7 @@ Usage: #example
 // * contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor aanmelding van patienten met astma voor telemonitoring"
-* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.5"
+* url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-asthma-enrollment|0.4"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:503d6f64-27af-4480-ad99-e357cea2decb"
 * status = #active
@@ -33,7 +33,6 @@ Usage: #example
 * item[=].answerOption[=].initialSelected = true
 
 * item[+].linkId = "da65ffd8-fb90-4918-becf-dfe0439577d8"
-* item[=].code = $sct#243120004 "Protocolvraag (regime/therapie)"
 * item[=].text = "Protocol"
 * item[=].type = #choice
 * item[=].required = true
@@ -60,8 +59,8 @@ Usage: #example
 * item[=].item[=].repeats = false
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].item[=].extension[=].valueString = "Plak hier het LAAP uit het EPD (inclusief rescuemedicatie, onderhoudsmedicatie...)"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/regex"
-* item[=].item[=].extension[=].valueString = "[a-zA-Z]{3,}"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].extension[=].valueInteger = 3
 
 
 * item[=].item[+].linkId = "90770491-49f9-4e2e-b629-046fe98f1716"
