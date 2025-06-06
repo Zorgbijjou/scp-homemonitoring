@@ -58,8 +58,11 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = false
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].item[=].extension.valueString = "Plak hier het LAAP uit het EPD (inclusief rescuemedicatie, onderhoudsmedicatie...)"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].item[=].extension[=].valueString = "Plak hier het LAAP uit het EPD (inclusief rescuemedicatie, onderhoudsmedicatie...)"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/regex"
+* item[=].item[=].extension[=].valueString = "[a-zA-Z]{3,}"
+
 
 * item[=].item[+].linkId = "90770491-49f9-4e2e-b629-046fe98f1716"
 * item[=].item[=].text = "Asthma Control Questionnaire score"
