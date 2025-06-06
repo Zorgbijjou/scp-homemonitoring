@@ -29,7 +29,7 @@
     "fshType": "Instance",
     "fshFile": "Questionnaire-asthma.fsh",
     "startLine": 1,
-    "endLine": 130
+    "endLine": 133
   },
   {
     "outputFile": "Questionnaire-zbj-telemonitoring-heartfailure-enrollment-assertions.json",

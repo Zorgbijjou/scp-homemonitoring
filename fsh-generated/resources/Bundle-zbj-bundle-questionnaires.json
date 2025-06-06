@@ -645,6 +645,10 @@
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
                     "valueString": "Plak hier het LAAP uit het EPD (inclusief rescuemedicatie, onderhoudsmedicatie...)"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minLength",
+                    "valueInteger": 3
                   }
                 ]
               },
