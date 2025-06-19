@@ -101,7 +101,7 @@ Usage: #example
 * item[=].item[=].extension.valueString = "Bijv. 5 weken"
 
 
-* item[=].item[+].linkId = "2c1136b1-6f99-444a-b3d3-c0a2521091dd"
+* item[=].item[+].linkId = "0cf18a73-6655-4180-9ec1-1d23d95e004a"
 * item[=].item[=].text = "Relevante co-morbiditeit (optioneel)"
 * item[=].item[=].code = $sct#410942007 "drug of geneesmiddel"
 * item[=].item[=].type = #text
