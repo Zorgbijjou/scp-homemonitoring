@@ -2,7 +2,6 @@ Instance: zbj-telemonitoring-other-email
 InstanceOf: Questionnaire
 Usage: #example
 * meta.tag = $FHIR-version#4.0.1
-// * contained[0] = YesNo
 * language = #nl-NL
 * title = "Vragenlijst voor het aanvragen van een ander e-mailadres voor een patiënt"
 * url = "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-other-email|0.5"
@@ -24,6 +23,6 @@ Usage: #example
 * item[0].linkId = "eab9d251-2192-4998-beda-0a911e2ac9a0"
 * item[=].text = "E-mailadres"
 * item[=].required = true
-* item[=].code = $sct#260686007 "e-mailadres (opdracht)"
+* item[=].code = $sct#260686007 "Contact Point"
 * item[=].type = #string
 * item[=].repeats = false
