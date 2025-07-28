@@ -1,0 +1,86 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "zbj-telemonitoring-other-email",
+  "meta": {
+    "tag": [
+      {
+        "code": "4.0.1",
+        "system": "http://hl7.org/fhir/FHIR-version"
+      }
+    ]
+  },
+  "language": "nl-NL",
+  "title": "Vragenlijst voor het aanvragen van een ander e-mailadres voor een patiënt",
+  "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-other-email|0.5",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:a7d00e8b-09cc-467a-ad7b-a4b16d1a9fbc"
+    }
+  ],
+  "status": "active",
+  "publisher": "Zorg bij jou B.V.",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://zorgbijjou.nl"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "date": "2025-07-28",
+  "effectivePeriod": {
+    "start": "2025-07-28"
+  },
+  "useContext": [
+    {
+      "code": {
+        "code": "task",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "OE",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "display": "order entry task"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "code": "focus",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "260686007",
+            "system": "http://snomed.info/sct",
+            "display": "e-mailadres (opdracht)"
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "eab9d251-2192-4998-beda-0a911e2ac9a0",
+      "text": "E-mailadres",
+      "required": true,
+      "code": [
+        {
+          "code": "260686007",
+          "system": "http://snomed.info/sct",
+          "display": "Contact Point"
+        }
+      ],
+      "type": "string",
+      "repeats": false
+    }
+  ]
+}
