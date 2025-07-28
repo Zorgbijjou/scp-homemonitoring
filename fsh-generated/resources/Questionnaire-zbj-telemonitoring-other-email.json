@@ -61,7 +61,7 @@
           {
             "code": "260686007",
             "system": "http://snomed.info/sct",
-            "display": "e-mailadres (opdracht)"
+            "display": "Contact Point"
           }
         ]
       }
@@ -76,7 +76,7 @@
         {
           "code": "260686007",
           "system": "http://snomed.info/sct",
-          "display": "Contact Point"
+          "display": "e-mailadres (opdracht)"
         }
       ],
       "type": "string",

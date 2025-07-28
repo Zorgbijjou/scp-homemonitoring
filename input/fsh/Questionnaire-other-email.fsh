@@ -18,12 +18,12 @@ Usage: #example
 * useContext[0].code = $usage-context-type#task
 * useContext[=].valueCodeableConcept = $v3-ActCode#OE "order entry task"
 * useContext[+].code = $usage-context-type#focus
-* useContext[=].valueCodeableConcept = $sct#260686007 "e-mailadres (opdracht)"
+* useContext[=].valueCodeableConcept = $sct#260686007 "Contact Point"
 
 
 * item[0].linkId = "eab9d251-2192-4998-beda-0a911e2ac9a0"
 * item[=].text = "E-mailadres"
 * item[=].required = true
-* item[=].code = $sct#260686007 "Contact Point"
+* item[=].code = $sct#260686007 "e-mailadres (opdracht)"
 * item[=].type = #string
 * item[=].repeats = false
