@@ -25,4 +25,6 @@ Usage: #example
 * item[=].required = true
 * item[=].code = $sct#260686007 "Contact Point"
 * item[=].type = #string
+* item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/regex"
+* item[=].extension[0].valueString = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
 * item[=].repeats = false
