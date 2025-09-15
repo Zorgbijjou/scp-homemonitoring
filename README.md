@@ -21,7 +21,7 @@ This document describes:
 - Run `sushi build` in the root of this repository
 - Add updated files to git and create a pull request
 - Get approval and merge to main
-- Restart the ZorgBijJou (ZBJ) ORCA containers to load the updated questionnaires
+- When using ORCA: restart the ORCA container of the organization fulfilling the order/task (e.g. Zorg bij jou) to load the updated questionnaires. ORCA's task engine will then use the updated questionnaires for new tasks/orders.
 
 # functional processes
 A general practitioner from organization GP sends a referral request to organization HPO for the treament of patient P.
