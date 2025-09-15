@@ -65,9 +65,9 @@ Usage: #example
 
 
 * item[=].item[+].linkId = "90770491-49f9-4e2e-b629-046fe98f1716"
-* item[=].item[=].text = "Asthma Control Questionnaire score"
+* item[=].item[=].text = "Asthma Control Questionnaire score (optioneel)"
 * item[=].item[=].code = $sct#763077003 "Asthma Control Questionnaire score"
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 * item[=].item[=].type = #decimal
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].item[=].extension[=].valueString = "ACQ '0.0'"

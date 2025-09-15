@@ -654,7 +654,7 @@
               },
               {
                 "linkId": "90770491-49f9-4e2e-b629-046fe98f1716",
-                "text": "Asthma Control Questionnaire score",
+                "text": "Asthma Control Questionnaire score (optioneel)",
                 "code": [
                   {
                     "code": "763077003",
@@ -662,7 +662,7 @@
                     "display": "Asthma Control Questionnaire score"
                   }
                 ],
-                "required": true,
+                "required": false,
                 "type": "decimal",
                 "extension": [
                   {
