@@ -2,6 +2,7 @@
 This document describes how to use the Nuts-specifications and Shared Care Planning in the context of home monitoring. This includes the specific agreements that, in addition to the Nuts-specifications "workflow/ notified pull" and "data/ zorginzage 2024" and the Shared Care Planning Implementation Guide, apply to the use case of home monitoring.
 
 This document describes:
+- the technical context on how to update questionnaires
 - the specific functional processes
 - the identifier of the use case;
 - the governance;
@@ -13,6 +14,14 @@ This document describes:
 - naming of actors;
 - the access policy; and
 - sequence diagram
+
+# How To
+- Install sushi through npm: `npm install -g fsh-sushi`
+- Update questionnaire definitions in `input/fsh`
+- Run `sushi build` in the root of this repository
+- Add updated files to git and create a pull request
+- Get approval and merge to main
+- When using ORCA: restart the ORCA container of the organization fulfilling the order/task (e.g. Zorg bij jou) to load the updated questionnaires. ORCA's task engine will then use the updated questionnaires for new tasks/orders.
 
 # functional processes
 A general practitioner from organization GP sends a referral request to organization HPO for the treament of patient P.
