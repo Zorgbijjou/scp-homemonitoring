@@ -49,36 +49,12 @@ Usage: #example
 
 * item[=].item[+].linkId = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].item[=].text = "Selecteer titratie en/of recompensatie"
-* item[=].item[=].type = #display
+* item[=].item[=].code = $sct#276239002 "therapie (regime/therapie)"
+* item[=].item[=].type = #choice
 * item[=].item[=].required = true
-
-* item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-* item[=].item[=].text = "Titratie"
-* item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
-* item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, titratie"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
-
-// //if you'd want to change previous question to a yes/no radio button:
-// * item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-// * item[=].item[=].text = "Titratie"
-// * item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].repeats = false
-// * item[=].item[=].answerValueSet = "#YesNo"
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-// * item[=].item[=].extension[=].valueCode = #horizontal
-
-* item[=].item[+].linkId = "dcba2829-32d8-4390-b1d4-32a5fefda539"
-* item[=].item[=].text = "Recompensatie"
-* item[=].item[=].code = $sct#308118002 "behandelen van hartfalen"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, recompensatie"
+* item[=].item[=].answerOption[0].valueCoding = $sct#713838004 "Titratie"
+* item[=].item[=].answerOption[+].valueCoding = $sct#308118002 "Recompensatie"
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 

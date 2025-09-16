@@ -3,6 +3,6 @@ Bundle-zbj-bundle-healthcareservices.json                                 zbj-bu
 Bundle-zbj-bundle-questionnaires.json                                     zbj-bundle-questionnaires                              Instance  Questionnaire.fsh               1 - 8
 HealthcareService-zbj-healthcareservice-telemonitoring.json               zbj-healthcareservice-telemonitoring                   Instance  HealthcareService.fsh           1 - 20
 Questionnaire-zbj-telemonitoring-asthma-enrollment.json                   zbj-telemonitoring-asthma-enrollment                   Instance  Questionnaire-asthma.fsh        1 - 133
-Questionnaire-zbj-telemonitoring-heartfailure-enrollment-assertions.json  zbj-telemonitoring-heartfailure-enrollment-assertions  Instance  Questionnaire-heartfailure.fsh  161 - 272
-Questionnaire-zbj-telemonitoring-heartfailure-enrollment.json             zbj-telemonitoring-heartfailure-enrollment             Instance  Questionnaire-heartfailure.fsh  1 - 156
+Questionnaire-zbj-telemonitoring-heartfailure-enrollment-assertions.json  zbj-telemonitoring-heartfailure-enrollment-assertions  Instance  Questionnaire-heartfailure.fsh  137 - 248
+Questionnaire-zbj-telemonitoring-heartfailure-enrollment.json             zbj-telemonitoring-heartfailure-enrollment             Instance  Questionnaire-heartfailure.fsh  1 - 132
 Questionnaire-zbj-telemonitoring-other-email.json                         zbj-telemonitoring-other-email                         Instance  Questionnaire-other-email.fsh   1 - 30

@@ -167,62 +167,29 @@
         {
           "linkId": "e0163609-a771-44c8-88e0-1c3bbeff2028",
           "text": "Selecteer titratie en/of recompensatie",
-          "type": "display",
-          "required": true
-        },
-        {
-          "linkId": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
-          "text": "Titratie",
           "code": [
             {
-              "code": "713838004",
+              "code": "276239002",
               "system": "http://snomed.info/sct",
-              "display": "optimaliseren van medicatie"
+              "display": "therapie (regime/therapie)"
             }
           ],
           "type": "choice",
+          "required": true,
           "repeats": true,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "373066001",
+                "code": "713838004",
                 "system": "http://snomed.info/sct",
-                "display": "ja, titratie"
+                "display": "Titratie"
               }
-            }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "check-box",
-                    "system": "http://hl7.org/fhir/questionnaire-item-control"
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "dcba2829-32d8-4390-b1d4-32a5fefda539",
-          "text": "Recompensatie",
-          "code": [
-            {
-              "code": "308118002",
-              "system": "http://snomed.info/sct",
-              "display": "behandelen van hartfalen"
-            }
-          ],
-          "type": "choice",
-          "repeats": true,
-          "answerOption": [
+            },
             {
               "valueCoding": {
-                "code": "373066001",
+                "code": "308118002",
                 "system": "http://snomed.info/sct",
-                "display": "ja, recompensatie"
+                "display": "Recompensatie"
               }
             }
           ],
