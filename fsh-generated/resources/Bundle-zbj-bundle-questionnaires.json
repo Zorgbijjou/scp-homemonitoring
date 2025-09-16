@@ -187,7 +187,7 @@
                   },
                   {
                     "url": "expression",
-                    "valueString": "item.where(linkId='1b81f13b-923e-4fc8-b758-08b3f172b2de').answer.exists() or item.where(linkId='dcba2829-32d8-4390-b1d4-32a5fefda539').answer.exists()"
+                    "valueString": "%resource.item.descendants().where(linkId='1b81f13b-923e-4fc8-b758-08b3f172b2de').answer.exists() or %resource.item.descendants().where(linkId='dcba2829-32d8-4390-b1d4-32a5fefda539').answer.exists()"
                   }
                 ]
               }

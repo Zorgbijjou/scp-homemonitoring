@@ -54,7 +54,7 @@ Usage: #example
 * item[=].extension[=].extension[+].url = "human"
 * item[=].extension[=].extension[=].valueString = "Selecteer minimaal één optie: Titratie of Recompensatie"
 * item[=].extension[=].extension[+].url = "expression"
-* item[=].extension[=].extension[=].valueString = "item.where(linkId='1b81f13b-923e-4fc8-b758-08b3f172b2de').answer.exists() or item.where(linkId='dcba2829-32d8-4390-b1d4-32a5fefda539').answer.exists()"
+* item[=].extension[=].extension[=].valueString = "%resource.item.descendants().where(linkId='1b81f13b-923e-4fc8-b758-08b3f172b2de').answer.exists() or %resource.item.descendants().where(linkId='dcba2829-32d8-4390-b1d4-32a5fefda539').answer.exists()"
 
 * item[=].item[+].linkId = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].item[=].text = "Selecteer titratie en/of recompensatie"
