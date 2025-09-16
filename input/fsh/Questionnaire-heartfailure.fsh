@@ -46,20 +46,22 @@ Usage: #example
 * item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $sct#255299009
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-constraint"
-* item[=].extension[=].extension[+].url = "key"
-* item[=].extension[=].extension[=].valueId = "titratie-or-recompensatie-required"
-* item[=].extension[=].extension[+].url = "severity"
-* item[=].extension[=].extension[=].valueCode = #error
-* item[=].extension[=].extension[+].url = "human"
-* item[=].extension[=].extension[=].valueString = "Selecteer minimaal één optie: Titratie of Recompensatie"
-* item[=].extension[=].extension[+].url = "expression"
-* item[=].extension[=].extension[=].valueString = "%resource.item.descendants().where(linkId='1b81f13b-923e-4fc8-b758-08b3f172b2de').answer.exists() or %resource.item.descendants().where(linkId='dcba2829-32d8-4390-b1d4-32a5fefda539').answer.exists()"
 
 * item[=].item[+].linkId = "e0163609-a771-44c8-88e0-1c3bbeff2028"
-* item[=].item[=].text = "Selecteer titratie en/of recompensatie"
-* item[=].item[=].type = #display
+* item[=].item[=].text = "Selecteer titratie en/of recompensatie (minimaal één vereist)"
+* item[=].item[=].type = #boolean
 * item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].item[=].enableWhen[=].operator = #exists
+* item[=].item[=].enableWhen[=].answerBoolean = false
+* item[=].item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
+* item[=].item[=].enableWhen[=].operator = #exists
+* item[=].item[=].enableWhen[=].answerBoolean = false
+* item[=].item[=].enableBehavior = #all
+* item[=].item[=].initial.valueBoolean = false
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+* item[=].item[=].extension[=].valueBoolean = true
 
 * item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
 * item[=].item[=].text = "Titratie"
