@@ -172,34 +172,9 @@
             "item": [
               {
                 "linkId": "e0163609-a771-44c8-88e0-1c3bbeff2028",
-                "text": "Selecteer titratie en/of recompensatie (minimaal één vereist)",
-                "type": "boolean",
-                "required": true,
-                "readOnly": true,
-                "enableWhen": [
-                  {
-                    "question": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
-                    "operator": "exists",
-                    "answerBoolean": false
-                  },
-                  {
-                    "question": "dcba2829-32d8-4390-b1d4-32a5fefda539",
-                    "operator": "exists",
-                    "answerBoolean": false
-                  }
-                ],
-                "enableBehavior": "all",
-                "initial": [
-                  {
-                    "valueBoolean": false
-                  }
-                ],
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                  }
-                ]
+                "text": "Selecteer titratie en/of recompensatie",
+                "type": "display",
+                "required": true
               },
               {
                 "linkId": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
@@ -276,6 +251,7 @@
           {
             "linkId": "170292e5-3163-43b4-88af-affb3e4c27ab",
             "type": "group",
+            "required": true,
             "enableWhen": [
               {
                 "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
