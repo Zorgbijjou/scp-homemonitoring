@@ -46,15 +46,36 @@ Usage: #example
 * item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $sct#255299009
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-constraint"
+* item[=].extension[=].extension[+].url = "key"
+* item[=].extension[=].extension[=].valueId = "titratie-or-recompensatie-required"
+* item[=].extension[=].extension[+].url = "severity"
+* item[=].extension[=].extension[=].valueCode = #error
+* item[=].extension[=].extension[+].url = "human"
+* item[=].extension[=].extension[=].valueString = "Selecteer minimaal één optie: Titratie of Recompensatie"
+* item[=].extension[=].extension[+].url = "expression"
+* item[=].extension[=].extension[=].valueString = "item.where(linkId='1b81f13b-923e-4fc8-b758-08b3f172b2de').answer.exists() or item.where(linkId='dcba2829-32d8-4390-b1d4-32a5fefda539').answer.exists()"
 
 * item[=].item[+].linkId = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].item[=].text = "Selecteer titratie en/of recompensatie"
-* item[=].item[=].code = $sct#276239002 "therapie (regime/therapie)"
-* item[=].item[=].type = #choice
+* item[=].item[=].type = #display
 * item[=].item[=].required = true
+
+* item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].item[=].text = "Titratie"
+* item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
+* item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption[0].valueCoding = $sct#713838004 "Titratie"
-* item[=].item[=].answerOption[+].valueCoding = $sct#308118002 "Recompensatie"
+* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, titratie"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
+
+* item[=].item[+].linkId = "dcba2829-32d8-4390-b1d4-32a5fefda539"
+* item[=].item[=].text = "Recompensatie"
+* item[=].item[=].code = $sct#308118002 "behandelen van hartfalen"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, recompensatie"
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
@@ -63,12 +84,12 @@ Usage: #example
 * item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
+* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#713838004
-* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
+* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#308118002
+* item[=].enableWhen[=].answerCoding = $sct#373066001
 * item[=].enableBehavior = #any
 
 
@@ -113,12 +134,12 @@ Usage: #example
 * item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
+* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#713838004
-* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
+* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#308118002
+* item[=].enableWhen[=].answerCoding = $sct#373066001
 * item[=].enableBehavior = #any
 
 
