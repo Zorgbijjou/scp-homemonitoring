@@ -222,18 +222,18 @@
           }
         },
         {
-          "question": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
+          "question": "e0163609-a771-44c8-88e0-1c3bbeff2028",
           "operator": "=",
           "answerCoding": {
-            "code": "373066001",
+            "code": "713838004",
             "system": "http://snomed.info/sct"
           }
         },
         {
-          "question": "dcba2829-32d8-4390-b1d4-32a5fefda539",
+          "question": "e0163609-a771-44c8-88e0-1c3bbeff2028",
           "operator": "=",
           "answerCoding": {
-            "code": "373066001",
+            "code": "308118002",
             "system": "http://snomed.info/sct"
           }
         }
@@ -365,18 +365,18 @@
           }
         },
         {
-          "question": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
+          "question": "e0163609-a771-44c8-88e0-1c3bbeff2028",
           "operator": "=",
           "answerCoding": {
-            "code": "373066001",
+            "code": "713838004",
             "system": "http://snomed.info/sct"
           }
         },
         {
-          "question": "dcba2829-32d8-4390-b1d4-32a5fefda539",
+          "question": "e0163609-a771-44c8-88e0-1c3bbeff2028",
           "operator": "=",
           "answerCoding": {
-            "code": "373066001",
+            "code": "308118002",
             "system": "http://snomed.info/sct"
           }
         }

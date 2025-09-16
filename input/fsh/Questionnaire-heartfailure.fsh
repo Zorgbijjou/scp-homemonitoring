@@ -63,12 +63,12 @@ Usage: #example
 * item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
+* item[=].enableWhen[=].answerCoding = $sct#713838004
+* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[=].answerCoding = $sct#308118002
 * item[=].enableBehavior = #any
 
 
@@ -113,12 +113,12 @@ Usage: #example
 * item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
+* item[=].enableWhen[=].answerCoding = $sct#713838004
+* item[=].enableWhen[+].question = "e0163609-a771-44c8-88e0-1c3bbeff2028"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[=].answerCoding = $sct#308118002
 * item[=].enableBehavior = #any
 
 
