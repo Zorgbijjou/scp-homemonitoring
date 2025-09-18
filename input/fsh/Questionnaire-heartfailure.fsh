@@ -61,18 +61,6 @@ Usage: #example
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
-// //if you'd want to change previous question to a yes/no radio button:
-// * item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-// * item[=].item[=].text = "Titratie"
-// * item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].repeats = false
-// * item[=].item[=].answerValueSet = "#YesNo"
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-// * item[=].item[=].extension[=].valueCode = #horizontal
-
 * item[=].item[+].linkId = "dcba2829-32d8-4390-b1d4-32a5fefda539"
 * item[=].item[=].text = "Recompensatie"
 * item[=].item[=].code = $sct#308118002 "behandelen van hartfalen"
@@ -87,12 +75,9 @@ Usage: #example
 * item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[=].answerCoding = $sct#255299009
 * item[=].enableBehavior = #any
 
 
@@ -137,12 +122,9 @@ Usage: #example
 * item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
+* item[=].enableWhen[=].answerCoding = $sct#255299009
 * item[=].enableBehavior = #any
 
 
