@@ -72,10 +72,14 @@ Usage: #example
 
 * item[+].linkId = "170292e5-3163-43b4-88af-affb3e4c27ab"
 * item[=].type = #group
-* item[=].required = true
-* item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
-* item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = $sct#255299009
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#58158008
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#255299009
+* item[=].enableBehavior = #any
+
 
 * item[=].item[+].linkId = "4e973bcb-bbbb-4a9f-877b-fbf45ab94361"
 * item[=].item[=].text = "Streefgewicht"
@@ -115,9 +119,14 @@ Usage: #example
 * item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-style"
 * item[=].text.extension[=].valueString = "font-size: 1.25rem;"
 * item[=].type = #group
-* item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
-* item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = $sct#255299009
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#58158008
+* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerCoding = $sct#255299009
+* item[=].enableBehavior = #any
+
 
 * item[=].item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
 * item[=].item[=].text = "Moeite met apps"

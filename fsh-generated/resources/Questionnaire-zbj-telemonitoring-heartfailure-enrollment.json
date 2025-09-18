@@ -245,8 +245,15 @@
     {
       "linkId": "170292e5-3163-43b4-88af-affb3e4c27ab",
       "type": "group",
-      "required": true,
       "enableWhen": [
+        {
+          "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
+          "operator": "=",
+          "answerCoding": {
+            "code": "58158008",
+            "system": "http://snomed.info/sct"
+          }
+        },
         {
           "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
           "operator": "=",
@@ -256,6 +263,7 @@
           }
         }
       ],
+      "enableBehavior": "any",
       "item": [
         {
           "linkId": "4e973bcb-bbbb-4a9f-877b-fbf45ab94361",
@@ -377,11 +385,20 @@
           "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
           "operator": "=",
           "answerCoding": {
+            "code": "58158008",
+            "system": "http://snomed.info/sct"
+          }
+        },
+        {
+          "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
+          "operator": "=",
+          "answerCoding": {
             "code": "255299009",
             "system": "http://snomed.info/sct"
           }
         }
       ],
+      "enableBehavior": "any",
       "item": [
         {
           "linkId": "295a22d7-d0ff-4546-b2a0-ce46beeba086",
