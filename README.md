@@ -34,7 +34,7 @@ The identifier of the use case is 'zorginzage-homemonitoring'.
 
 # Governance
 - Information standards for the medical data are developed and maintained by Zorg bij Jou and based on national information standards developed and maintained by Nictiz
-- Information standards for the composition of the care network (e.g. CarePlan, CareTeam) are developeed and maintained by IHE ([IHE-DCP chapter 6.6](http://ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_DCP.pdf))
+- Information standards for the composition of the care network (e.g. CarePlan, CareTeam) are developed and maintained by IHE ([IHE-DCP chapter 6.6](http://ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_DCP.pdf))
 - The Shared Care Planning Implementation Guide is developed and maintained by Santeon
 - The Nuts-specifications are developed and maintained by the Nuts foundation
 - This specification is developed and maintained by [Zorg bij Jou](https://www.zorgbijjou.nl) in collaboration with Santeon
@@ -54,7 +54,7 @@ This verifiable presentation uses the following attributes:
 | URA                      | Unique identifier of the organization                     |
 | medical data endpoint    | absolute url of fhir endpoint for retrieving medical data |
 | CarePlanService endpoint | absolute url of fhir endpoint for the CarePlanService     |
-- 
+
 
 The following presentation definition is needed:
 <to do>
@@ -83,7 +83,7 @@ In order to share data securely between different healthcare providers, cross-or
 # Permitted legal bases and evidence
 The following legal bases are supported for the use case medical specialist referral:
 - 'implicit consent'
-- 'explicit prior consent': not necessary because consent for data processing can be assumed when the patient has given informed consent to the general practiioner for the referral to organization HPO and to the head practitioner at organization HPO for the execution of home monitoring services by organization MSC
+- 'explicit prior consent': not necessary because consent for data processing can be assumed when the patient has given informed consent to the general practitioner for the referral to organization HPO and to the head practitioner at organization HPO for the execution of home monitoring services by organization MSC
 
 The following evidence is allowed for 'implicit consent':
 - registration in the source system used by the general practitioner
@@ -102,7 +102,7 @@ to do.
 One aspect of a Nuts Application involves describing authorizations to certain resources. Authorizations are described in an access policy. It is the responsibility of the Data Holder System to adhere to the policy when resources are being requested. The use case homemonitoring involves three different access policies: 
 | policy name               | description                                                                                                                                                                                                                                                      |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| homemonitoring-dataholder | The homemonitoring-dataholder policy controls access to actual medical data e.g. Observation, Condition, Procedure?, EpisodeOfCare?)                                                                                                                             |
+| homemonitoring-dataholder | The homemonitoring-dataholder policy controls access to actual medical data (e.g. Observation, Condition, Procedure?, EpisodeOfCare?)                                                                                                                            |
 | homemonitoring-placer     | The homemonitoring-filler policy controls data access necessary for sending workflow-requests related to home monitoring (e.g. sending an onboarding-request, MDT-request, medicationrequest or servicerequest) (e.g. CarePlan, CarePlan, Task, ServiceRequest)  |
 | homemonitoring-filler     | The homemonitoring-filler policy controls data access necessary for receiving workflow-requests related to home monitoring (e.g. receiving onboarding-request, MDT-request, medicationrequest or servicerequest) (e.g. CarePlan, CarePlan, Task, ServiceRequest) |
 
