@@ -33,7 +33,7 @@ A home monitoring professional (commonly referred to as eNurse) works in a medic
 The identifier of the use case is 'zorginzage-homemonitoring'.
 
 # Governance
-- Information standards for the medical data are developed and maintained by Zorg bij Jou and based on national informayion standards developed and maintained by Nictiz
+- Information standards for the medical data are developed and maintained by Zorg bij Jou and based on national information standards developed and maintained by Nictiz
 - Information standards for the composition of the care network (e.g. CarePlan, CareTeam) are developeed and maintained by IHE ([IHE-DCP chapter 6.6](http://ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_DCP.pdf))
 - The Shared Care Planning Implementation Guide is developed and maintained by Santeon
 - The Nuts-specifications are developed and maintained by the Nuts foundation
@@ -49,11 +49,11 @@ The identifier of the use case is 'zorginzage-homemonitoring'.
 # Presentation definition for UCL/ Service Discovery
 Parties that support the use case "zorginzage-homemonitoring" can register themselves at a discovery service to become discoverable. To do this the party presents a verifiable presentation to the discovery service.
 This verifiable presentation uses the following attributes:
-|attribute|description|
-|---------|-----------|
-|URA| Unique identifier of the organization|
-|medical data endpoint|absolute url of fhir endpoint for retrieving medical data|
-|CarePlanService endpoint|absolute url of fhir endpoint for the CarePlanService|
+| attribute                | description                                               |
+| ------------------------ | --------------------------------------------------------- |
+| URA                      | Unique identifier of the organization                     |
+| medical data endpoint    | absolute url of fhir endpoint for retrieving medical data |
+| CarePlanService endpoint | absolute url of fhir endpoint for the CarePlanService     |
 - 
 
 The following presentation definition is needed:
@@ -68,11 +68,11 @@ The following presentation definition is needed:
 
 # presentation definition for data requests
 Data users that want to send data requests to a data holder in the context of the use case "zorginzage-homemonitoring" need an access token from the data holder. The access token request requires the data user to present a verifiable presentation to the data holder. This verifiable presentation uses the following attributes:
-|attribute|description|
-|---------|-----------|
-|URA| Unique identifier of the data user organization|
-|Homemonitoring membership?| Do we need an attribute that says "this org supports the use case homemonitoring"?|
-|UZI| unique identifier op person that requests the data|
+| attribute                  | description                                                                        |
+| -------------------------- | ---------------------------------------------------------------------------------- |
+| URA                        | Unique identifier of the data user organization                                    |
+| Homemonitoring membership? | Do we need an attribute that says "this org supports the use case homemonitoring"? |
+| UZI                        | unique identifier op person that requests the data                                 |
 
 # Permitted means of authentication of healthcare professionals
 In order to share data securely between different healthcare providers, cross-organizatonal authentication of healthcare professionals is essential. For this use case the following means of healthcare professional authentication are permitted:
@@ -100,11 +100,11 @@ to do.
 
 # Access Policy
 One aspect of a Nuts Application involves describing authorizations to certain resources. Authorizations are described in an access policy. It is the responsibility of the Data Holder System to adhere to the policy when resources are being requested. The use case homemonitoring involves three different access policies: 
-|policy name|description|
-|-----------|-----------|
-|homemonitoring-dataholder|The homemonitoring-dataholder policy controls access to actual medical data e.g. Observation, Condition, Procedure?, EpisodeOfCare?)|
-|homemonitoring-placer|The homemonitoring-filler policy controls data access necessary for sending workflow-requests related to home monitoring (e.g. sending an onboarding-request, MDT-request, medicationrequest or servicerequest) (e.g. CarePlan, CarePlan, Task, ServiceRequest)
-|homemonitoring-filler|The homemonitoring-filler policy controls data access necessary for receiving workflow-requests related to home monitoring (e.g. receiving onboarding-request, MDT-request, medicationrequest or servicerequest) (e.g. CarePlan, CarePlan, Task, ServiceRequest)
+| policy name               | description                                                                                                                                                                                                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| homemonitoring-dataholder | The homemonitoring-dataholder policy controls access to actual medical data e.g. Observation, Condition, Procedure?, EpisodeOfCare?)                                                                                                                             |
+| homemonitoring-placer     | The homemonitoring-filler policy controls data access necessary for sending workflow-requests related to home monitoring (e.g. sending an onboarding-request, MDT-request, medicationrequest or servicerequest) (e.g. CarePlan, CarePlan, Task, ServiceRequest)  |
+| homemonitoring-filler     | The homemonitoring-filler policy controls data access necessary for receiving workflow-requests related to home monitoring (e.g. receiving onboarding-request, MDT-request, medicationrequest or servicerequest) (e.g. CarePlan, CarePlan, Task, ServiceRequest) |
 
 ## homemonitoring-dataholder Policy
 
@@ -116,11 +116,11 @@ The homemonitoring-dataholder policy describes rules for personal resources that
 
 Pulling medical data resources requires an authorization record that is registered in the data holder system. The record must meet the following requirements:
 
-| Field                                     | Description                                               |
-|-------------------------------------------|-----------------------------------------------------------|
-| `credentialSubject.id`                    | Data user URA                                             |
-| `credentialSubject.purposeOfUse`          | `homemonitoring-datamonitoring`                           |
-| `credentialSubject.legalBase.consentType` | `implied`                                                 |
+| Field                                     | Description                     |
+| ----------------------------------------- | ------------------------------- |
+| `credentialSubject.id`                    | Data user URA                   |
+| `credentialSubject.purposeOfUse`          | `homemonitoring-datamonitoring` |
+| `credentialSubject.legalBase.consentType` | `implied`                       |
 
 The Dataholder System must check whether the used access token (and thus the presented URA) provides access to the requested resource. The URA of the Data User is included in the VP when requesting the access token.
 
