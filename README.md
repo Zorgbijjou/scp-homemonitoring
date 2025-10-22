@@ -62,7 +62,7 @@ The following presentation definition is needed:
 # Service Discovery definition
 
 - Development environment: TODO
-- Test environment: see `config/nuts/discovery/test:SharedCarePlanning2024.json`
+- Test environment: see `config/nuts/discovery/test-SharedCarePlanning2024.json`
 - Acceptance environment: TODO
 - Production environment: TODO
 
