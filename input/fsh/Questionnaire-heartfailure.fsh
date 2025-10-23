@@ -74,16 +74,6 @@ Usage: #example
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].extension[=].valueString = "Streefgewicht '0.0'"
 
-// TODO this item is not described in the ux designs, needs confirmation
-* item[+].linkId = "135aec2f-e410-4668-9a26-f745dc1789af"
-* item[=].text = "Ziekenhuispatiënt"
-* item[=].code = $sct#266938001 "ziekenhuispatiënt"
-* item[=].type = #choice
-* item[=].repeats = true
-* item[=].answerOption.valueCoding = $sct#373066001 "ja, patiënt is opgenomen geweest"
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
-
 * item[+].linkId = "be4b671d-f91f-4fc3-a6d8-fcafa8e67161"
 * item[=].text = "Notitie"
 * item[=].code = $sct#11221000146107 "notitie (gegevensobject)"
