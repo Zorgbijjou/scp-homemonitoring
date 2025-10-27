@@ -89,18 +89,19 @@ Usage: #example
 
 * item[+].linkId = "2bc0b73f-506a-48a4-994d-fe355a5825f3"
 * item[=].text = "Begeleiding bij onboarding"
-* item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-style"
-* item[=].text.extension[=].valueString = "font-size: 1.25rem;"
-* item[=].type = #group
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+// Custom rendering since ORCA does not support _text elements
+* item[=].extension[=].valueString = "<style>#label-2bc0b73f-506a-48a4-994d-fe355a5825f3 { font-size: 1.25rem; }</style>Begeleiding bij onboarding"
+* item[=].type = #display
 
-* item[=].item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
-* item[=].item[=].text = "Moeite met apps"
-* item[=].item[=].code = $sct#761731000000100 "moeite met gebruiken van personal computer"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "Ja, de patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
+* item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
+* item[=].text = "Moeite met apps"
+* item[=].code = $sct#761731000000100 "moeite met gebruiken van personal computer"
+* item[=].type = #choice
+* item[=].repeats = true
+* item[=].answerOption.valueCoding = $sct#373066001 "Ja, de patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
 
 
