@@ -51,6 +51,8 @@ Usage: #example
 * item[=].required = true
 * item[=].answerOption[0].valueCoding = $sct#713838004 "Titratie" // optimaliseren van medicatie
 * item[=].answerOption[+].valueCoding = $sct#308118002 "Recompensatie" // behandelen van hartfalen
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].extension[=].valueString = "Selecteer protocol"
 
 * item[+].linkId = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
 * item[=].text = "Meetprotocol"
@@ -63,6 +65,8 @@ Usage: #example
 * item[=].answerOption[0].valueCoding = $sct#58158008 "Stabiel"
 * item[=].answerOption[+].valueCoding = $sct#713838004 "Titratie" // optimaliseren van medicatie
 * item[=].answerOption[+].valueCoding = $sct#308118002 "Recompensatie" // behandelen van hartfalen
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].extension[=].valueString = "Selecteer protocol"
 
 * item[+].linkId = "4e973bcb-bbbb-4a9f-877b-fbf45ab94361"
 * item[=].text = "Streefgewicht"
@@ -72,10 +76,10 @@ Usage: #example
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[=].extension[=].valueCoding = $unitsofmeasure#kg "kg"
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].extension[=].valueString = "Streefgewicht '0.0'"
+* item[=].extension[=].valueString = "Streefgewicht"
 
 * item[+].linkId = "be4b671d-f91f-4fc3-a6d8-fcafa8e67161"
-* item[=].text = "Notitie"
+* item[=].text = "Notitie (optioneel)"
 * item[=].code = $sct#11221000146107 "notitie (gegevensobject)"
 * item[=].type = #text
 * item[=].repeats = false
@@ -95,7 +99,7 @@ Usage: #example
 * item[=].type = #display
 
 * item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
-* item[=].text = "Moeite met apps"
+* item[=].text = "Begeleiding"
 * item[=].code = $sct#761731000000100 "moeite met gebruiken van personal computer"
 * item[=].type = #choice
 * item[=].repeats = true
