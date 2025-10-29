@@ -35,6 +35,7 @@ Usage: #example
 * item[+].linkId = "75ef8921-cfc9-4573-8ff0-99b650c860de"
 * item[=].text = "Start thuismonitoring na opname voor hartfalen"
 * item[=].type = #boolean
+* item[=].initial.valueBoolean = false
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"

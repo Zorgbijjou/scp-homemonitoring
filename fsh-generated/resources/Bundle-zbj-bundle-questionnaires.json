@@ -131,6 +131,11 @@
             "linkId": "75ef8921-cfc9-4573-8ff0-99b650c860de",
             "text": "Start thuismonitoring na opname voor hartfalen",
             "type": "boolean",
+            "initial": [
+              {
+                "valueBoolean": false
+              }
+            ],
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
