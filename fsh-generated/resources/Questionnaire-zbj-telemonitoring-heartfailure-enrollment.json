@@ -306,17 +306,6 @@
       ]
     },
     {
-      "linkId": "2bc0b73f-506a-48a4-994d-fe355a5825f3",
-      "text": "Begeleiding bij onboarding",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-          "valueString": "<style>#label-2bc0b73f-506a-48a4-994d-fe355a5825f3 { font-size: 1.25rem; }</style>Begeleiding bij onboarding"
-        }
-      ],
-      "type": "display"
-    },
-    {
       "linkId": "295a22d7-d0ff-4546-b2a0-ce46beeba086",
       "text": "Begeleiding",
       "code": [

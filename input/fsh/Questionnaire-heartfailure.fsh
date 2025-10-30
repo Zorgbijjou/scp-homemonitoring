@@ -92,13 +92,6 @@ Usage: #example
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory"
 * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-display-category#instructions
 
-* item[+].linkId = "2bc0b73f-506a-48a4-994d-fe355a5825f3"
-* item[=].text = "Begeleiding bij onboarding"
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-// Custom rendering since ORCA does not support _text elements
-* item[=].extension[=].valueString = "<style>#label-2bc0b73f-506a-48a4-994d-fe355a5825f3 { font-size: 1.25rem; }</style>Begeleiding bij onboarding"
-* item[=].type = #display
-
 * item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
 * item[=].text = "Begeleiding"
 * item[=].code = $sct#761731000000100 "moeite met gebruiken van personal computer"
