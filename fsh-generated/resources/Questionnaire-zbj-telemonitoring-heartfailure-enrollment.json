@@ -123,7 +123,7 @@
     },
     {
       "linkId": "75ef8921-cfc9-4573-8ff0-99b650c860de",
-      "text": "Start thuismonitoring na opname voor hartfalen",
+      "text": "Gerelateerde ziekenhuisopname",
       "type": "boolean",
       "initial": [
         {
@@ -144,7 +144,7 @@
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-          "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start thuismonitoring na opname in het ziekenhuis voor hartfalen';}</style> Start thuismonitoring na opname voor hartfalen"
+          "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
         }
       ]
     },
