@@ -3,16 +3,24 @@
     "organization": {
       "format": {
         "ldp_vc": {
-          "proof_type": ["JsonWebSignature2020"]
+          "proof_type": [
+            "JsonWebSignature2020"
+          ]
         },
         "jwt_vc": {
-          "alg": ["ES256"]
+          "alg": [
+            "ES256"
+          ]
         },
         "ldp_vp": {
-          "proof_type": ["JsonWebSignature2020"]
+          "proof_type": [
+            "JsonWebSignature2020"
+          ]
         },
         "jwt_vp": {
-          "alg": ["ES256"]
+          "alg": [
+            "ES256"
+          ]
         }
       },
       "id": "pd_any_care_organization_with_employee",
@@ -26,7 +34,9 @@
           "constraints": {
             "fields": [
               {
-                "path": ["$.type"],
+                "path": [
+                  "$.type"
+                ],
                 "filter": {
                   "type": "string",
                   "const": "NutsUraCredential"

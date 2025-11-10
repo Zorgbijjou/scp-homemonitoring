@@ -6,16 +6,24 @@
     "id": "test-SharedCarePlanning2024",
     "format": {
       "ldp_vc": {
-        "proof_type": ["JsonWebSignature2020"]
+        "proof_type": [
+          "JsonWebSignature2020"
+        ]
       },
       "jwt_vc": {
-        "alg": ["ES256"]
+        "alg": [
+          "ES256"
+        ]
       },
       "ldp_vp": {
-        "proof_type": ["JsonWebSignature2020"]
+        "proof_type": [
+          "JsonWebSignature2020"
+        ]
       },
       "jwt_vp": {
-        "alg": ["ES256"]
+        "alg": [
+          "ES256"
+        ]
       }
     },
     "input_descriptors": [
@@ -26,7 +34,9 @@
         "constraints": {
           "fields": [
             {
-              "path": ["$.type"],
+              "path": [
+                "$.type"
+              ],
               "filter": {
                 "type": "string",
                 "const": "NutsUraCredential"
@@ -62,7 +72,9 @@
         "constraints": {
           "fields": [
             {
-              "path": ["$.type"],
+              "path": [
+                "$.type"
+              ],
               "filter": {
                 "type": "string",
                 "const": "DiscoveryRegistrationCredential"
