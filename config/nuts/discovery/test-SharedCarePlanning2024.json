@@ -1,9 +1,9 @@
 {
-  "id": "test:SharedCarePlanning2024",
-  "endpoint": "https://zorgbijjou.test.integration.zorgbijjou.com/nuts/discovery/test:SharedCarePlanning2024",
+  "id": "test-SharedCarePlanning2024",
+  "endpoint": "https://zorgbijjou.test.integration.zorgbijjou.com/nuts/discovery/test-SharedCarePlanning2024",
   "presentation_max_validity": 2764800,
   "presentation_definition": {
-    "id": "test:SharedCarePlanning2024",
+    "id": "test-SharedCarePlanning2024",
     "format": {
       "ldp_vc": {
         "proof_type": [

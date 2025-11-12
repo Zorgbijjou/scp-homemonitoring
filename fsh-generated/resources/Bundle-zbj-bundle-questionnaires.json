@@ -128,6 +128,75 @@
             ]
           },
           {
+            "linkId": "75ef8921-cfc9-4573-8ff0-99b650c860de",
+            "text": "Gerelateerde ziekenhuisopname",
+            "type": "boolean",
+            "initial": [
+              {
+                "valueBoolean": false
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "check-box",
+                      "system": "http://hl7.org/fhir/questionnaire-item-control"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
+              }
+            ]
+          },
+          {
+            "linkId": "274e66c7-1e60-4075-bcde-1d11876e3897",
+            "text": "Meetprotocol",
+            "code": [
+              {
+                "code": "243120004",
+                "system": "http://snomed.info/sct",
+                "display": "Protocolvraag (regime/therapie)"
+              }
+            ],
+            "type": "choice",
+            "enableWhen": [
+              {
+                "question": "75ef8921-cfc9-4573-8ff0-99b650c860de",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "713838004",
+                  "system": "http://snomed.info/sct",
+                  "display": "Titratie"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "308118002",
+                  "system": "http://snomed.info/sct",
+                  "display": "Recompensatie"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                "valueString": "Selecteer protocol"
+              }
+            ]
+          },
+          {
             "linkId": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
             "text": "Meetprotocol",
             "code": [
@@ -138,108 +207,102 @@
               }
             ],
             "type": "choice",
+            "enableWhen": [
+              {
+                "question": "75ef8921-cfc9-4573-8ff0-99b650c860de",
+                "operator": "!=",
+                "answerBoolean": true
+              }
+            ],
             "required": true,
             "answerOption": [
-              {
-                "valueCoding": {
-                  "code": "255299009",
-                  "system": "http://snomed.info/sct",
-                  "display": "Instabiel"
-                }
-              },
               {
                 "valueCoding": {
                   "code": "58158008",
                   "system": "http://snomed.info/sct",
                   "display": "Stabiel"
                 }
+              },
+              {
+                "valueCoding": {
+                  "code": "713838004",
+                  "system": "http://snomed.info/sct",
+                  "display": "Titratie"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "308118002",
+                  "system": "http://snomed.info/sct",
+                  "display": "Recompensatie"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                "valueString": "Selecteer protocol"
               }
             ]
           },
           {
-            "linkId": "2f505566-ac92-4347-8731-840e6bc84851",
-            "type": "group",
-            "enableWhen": [
+            "linkId": "4e973bcb-bbbb-4a9f-877b-fbf45ab94361",
+            "text": "Streefgewicht",
+            "required": true,
+            "type": "decimal",
+            "code": [
               {
-                "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
-                "operator": "=",
-                "answerCoding": {
-                  "code": "255299009",
-                  "system": "http://snomed.info/sct"
+                "code": "1078215008",
+                "system": "http://snomed.info/sct",
+                "display": "Target body weight"
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                "valueCoding": {
+                  "code": "kg",
+                  "system": "http://unitsofmeasure.org",
+                  "display": "kg"
                 }
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                "valueString": "Streefgewicht"
+              }
+            ]
+          },
+          {
+            "linkId": "be4b671d-f91f-4fc3-a6d8-fcafa8e67161",
+            "text": "Notitie (optioneel)",
+            "code": [
+              {
+                "code": "11221000146107",
+                "system": "http://snomed.info/sct",
+                "display": "notitie (gegevensobject)"
+              }
+            ],
+            "type": "text",
+            "repeats": false,
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                "valueString": "Notitie (optioneel)"
               }
             ],
             "item": [
               {
-                "linkId": "e0163609-a771-44c8-88e0-1c3bbeff2028",
-                "text": "Selecteer titratie en/of recompensatie",
+                "linkId": "c230b150-c66f-4892-b9f6-5fff067962ee",
+                "text": "Voorbeelden: patiënt is slechthorend, patiënt wordt geholpen door mantelzorger.",
                 "type": "display",
-                "required": true
-              },
-              {
-                "linkId": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
-                "text": "Titratie",
-                "code": [
-                  {
-                    "code": "713838004",
-                    "system": "http://snomed.info/sct",
-                    "display": "optimaliseren van medicatie"
-                  }
-                ],
-                "type": "choice",
-                "repeats": true,
-                "answerOption": [
-                  {
-                    "valueCoding": {
-                      "code": "373066001",
-                      "system": "http://snomed.info/sct",
-                      "display": "ja, titratie"
-                    }
-                  }
-                ],
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                     "valueCodeableConcept": {
                       "coding": [
                         {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "dcba2829-32d8-4390-b1d4-32a5fefda539",
-                "text": "Recompensatie",
-                "code": [
-                  {
-                    "code": "308118002",
-                    "system": "http://snomed.info/sct",
-                    "display": "behandelen van hartfalen"
-                  }
-                ],
-                "type": "choice",
-                "repeats": true,
-                "answerOption": [
-                  {
-                    "valueCoding": {
-                      "code": "373066001",
-                      "system": "http://snomed.info/sct",
-                      "display": "ja, recompensatie"
-                    }
-                  }
-                ],
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
+                          "code": "instructions",
+                          "system": "http://hl7.org/fhir/questionnaire-display-category"
                         }
                       ]
                     }
@@ -249,213 +312,37 @@
             ]
           },
           {
-            "linkId": "170292e5-3163-43b4-88af-affb3e4c27ab",
-            "type": "group",
-            "enableWhen": [
+            "linkId": "295a22d7-d0ff-4546-b2a0-ce46beeba086",
+            "text": "Begeleiding",
+            "code": [
               {
-                "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
-                "operator": "=",
-                "answerCoding": {
-                  "code": "58158008",
-                  "system": "http://snomed.info/sct"
-                }
-              },
+                "code": "761731000000100",
+                "system": "http://snomed.info/sct",
+                "display": "moeite met gebruiken van personal computer"
+              }
+            ],
+            "type": "choice",
+            "repeats": true,
+            "answerOption": [
               {
-                "question": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
-                "operator": "=",
-                "answerCoding": {
+                "valueCoding": {
                   "code": "373066001",
-                  "system": "http://snomed.info/sct"
-                }
-              },
-              {
-                "question": "dcba2829-32d8-4390-b1d4-32a5fefda539",
-                "operator": "=",
-                "answerCoding": {
-                  "code": "373066001",
-                  "system": "http://snomed.info/sct"
+                  "system": "http://snomed.info/sct",
+                  "display": "Ja, de patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
                 }
               }
             ],
-            "enableBehavior": "any",
-            "item": [
+            "extension": [
               {
-                "linkId": "4e973bcb-bbbb-4a9f-877b-fbf45ab94361",
-                "text": "Streefgewicht",
-                "required": true,
-                "type": "decimal",
-                "code": [
-                  {
-                    "code": "1078215008",
-                    "system": "http://snomed.info/sct",
-                    "display": "Target body weight"
-                  }
-                ],
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
-                    "valueCoding": {
-                      "code": "kg",
-                      "system": "http://unitsofmeasure.org",
-                      "display": "kg"
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "check-box",
+                      "system": "http://hl7.org/fhir/questionnaire-item-control"
                     }
-                  },
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Streefgewicht '0.0'"
-                  }
-                ]
-              },
-              {
-                "linkId": "135aec2f-e410-4668-9a26-f745dc1789af",
-                "text": "Ziekenhuispatiënt",
-                "code": [
-                  {
-                    "code": "266938001",
-                    "system": "http://snomed.info/sct",
-                    "display": "ziekenhuispatiënt"
-                  }
-                ],
-                "type": "choice",
-                "repeats": true,
-                "answerOption": [
-                  {
-                    "valueCoding": {
-                      "code": "373066001",
-                      "system": "http://snomed.info/sct",
-                      "display": "ja, patiënt is opgenomen geweest"
-                    }
-                  }
-                ],
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "be4b671d-f91f-4fc3-a6d8-fcafa8e67161",
-                "text": "Notitie",
-                "code": [
-                  {
-                    "code": "11221000146107",
-                    "system": "http://snomed.info/sct",
-                    "display": "notitie (gegevensobject)"
-                  }
-                ],
-                "type": "text",
-                "repeats": false,
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Notitie (optioneel)"
-                  }
-                ],
-                "item": [
-                  {
-                    "linkId": "c230b150-c66f-4892-b9f6-5fff067962ee",
-                    "text": "Voorbeelden: patiënt is slechthorend, patiënt wordt geholpen door mantelzorger.",
-                    "type": "display",
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                        "valueCodeableConcept": {
-                          "coding": [
-                            {
-                              "code": "instructions",
-                              "system": "http://hl7.org/fhir/questionnaire-display-category"
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "linkId": "2bc0b73f-506a-48a4-994d-fe355a5825f3",
-            "text": "Begeleiding bij onboarding",
-            "_text": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
-                  "valueString": "font-size: 1.25rem;"
+                  ]
                 }
-              ]
-            },
-            "type": "group",
-            "enableWhen": [
-              {
-                "question": "245f3b7e-47d2-4b78-b751-fb04f38b17b9",
-                "operator": "=",
-                "answerCoding": {
-                  "code": "58158008",
-                  "system": "http://snomed.info/sct"
-                }
-              },
-              {
-                "question": "1b81f13b-923e-4fc8-b758-08b3f172b2de",
-                "operator": "=",
-                "answerCoding": {
-                  "code": "373066001",
-                  "system": "http://snomed.info/sct"
-                }
-              },
-              {
-                "question": "dcba2829-32d8-4390-b1d4-32a5fefda539",
-                "operator": "=",
-                "answerCoding": {
-                  "code": "373066001",
-                  "system": "http://snomed.info/sct"
-                }
-              }
-            ],
-            "enableBehavior": "any",
-            "item": [
-              {
-                "linkId": "295a22d7-d0ff-4546-b2a0-ce46beeba086",
-                "text": "Moeite met apps",
-                "code": [
-                  {
-                    "code": "761731000000100",
-                    "system": "http://snomed.info/sct",
-                    "display": "moeite met gebruiken van personal computer"
-                  }
-                ],
-                "type": "choice",
-                "repeats": true,
-                "answerOption": [
-                  {
-                    "valueCoding": {
-                      "code": "373066001",
-                      "system": "http://snomed.info/sct",
-                      "display": "ja, patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
-                    }
-                  }
-                ],
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "check-box",
-                          "system": "http://hl7.org/fhir/questionnaire-item-control"
-                        }
-                      ]
-                    }
-                  }
-                ]
               }
             ]
           }

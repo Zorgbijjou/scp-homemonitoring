@@ -32,128 +32,74 @@ Usage: #example
 * item[=].answerOption[0].valueCoding = $sct#84114007 "Hartfalen"
 * item[=].answerOption[=].initialSelected = true
 
-* item[+].linkId = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[+].linkId = "75ef8921-cfc9-4573-8ff0-99b650c860de"
+* item[=].text = "Gerelateerde ziekenhuisopname"
+* item[=].type = #boolean
+* item[=].initial.valueBoolean = false
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+// Custom rendering since FHIR Questionnaire does not support labels next to boolean checkboxes
+* item[=].extension[=].valueString = "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
+
+* item[+].linkId = "274e66c7-1e60-4075-bcde-1d11876e3897"
 * item[=].text = "Meetprotocol"
-//* item[=].code = $sct#362981000 "kwalificatiewaarde"
 * item[=].code = $sct#243120004 "Protocolvraag (regime/therapie)"
 * item[=].type = #choice
-* item[=].required = true
-* item[=].answerOption[0].valueCoding = $sct#255299009 "Instabiel"
-* item[=].answerOption[+].valueCoding = $sct#58158008 "Stabiel"
-
-* item[+].linkId = "2f505566-ac92-4347-8731-840e6bc84851" //extra-parameters
-* item[=].type = #group
-* item[=].enableWhen.question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].enableWhen.question = "75ef8921-cfc9-4573-8ff0-99b650c860de"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = $sct#255299009
+* item[=].enableWhen.answerBoolean = true
+* item[=].required = true
+* item[=].answerOption[0].valueCoding = $sct#713838004 "Titratie" // optimaliseren van medicatie
+* item[=].answerOption[+].valueCoding = $sct#308118002 "Recompensatie" // behandelen van hartfalen
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].extension[=].valueString = "Selecteer protocol"
 
-* item[=].item[+].linkId = "e0163609-a771-44c8-88e0-1c3bbeff2028"
-* item[=].item[=].text = "Selecteer titratie en/of recompensatie"
+* item[+].linkId = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
+* item[=].text = "Meetprotocol"
+* item[=].code = $sct#243120004 "Protocolvraag (regime/therapie)"
+* item[=].type = #choice
+* item[=].enableWhen.question = "75ef8921-cfc9-4573-8ff0-99b650c860de"
+* item[=].enableWhen.operator = #!=
+* item[=].enableWhen.answerBoolean = true
+* item[=].required = true
+* item[=].answerOption[0].valueCoding = $sct#58158008 "Stabiel"
+* item[=].answerOption[+].valueCoding = $sct#713838004 "Titratie" // optimaliseren van medicatie
+* item[=].answerOption[+].valueCoding = $sct#308118002 "Recompensatie" // behandelen van hartfalen
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].extension[=].valueString = "Selecteer protocol"
+
+* item[+].linkId = "4e973bcb-bbbb-4a9f-877b-fbf45ab94361"
+* item[=].text = "Streefgewicht"
+* item[=].required = true
+* item[=].type = #decimal
+* item[=].code = $sct#1078215008 "Target body weight"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension[=].valueCoding = $unitsofmeasure#kg "kg"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].extension[=].valueString = "Streefgewicht"
+
+* item[+].linkId = "be4b671d-f91f-4fc3-a6d8-fcafa8e67161"
+* item[=].text = "Notitie (optioneel)"
+* item[=].code = $sct#11221000146107 "notitie (gegevensobject)"
+* item[=].type = #text
+* item[=].repeats = false
+* item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].extension.valueString = "Notitie (optioneel)"
+* item[=].item[+].linkId = "c230b150-c66f-4892-b9f6-5fff067962ee"
+* item[=].item[=].text = "Voorbeelden: patiënt is slechthorend, patiënt wordt geholpen door mantelzorger."
 * item[=].item[=].type = #display
-* item[=].item[=].required = true
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory"
+* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-display-category#instructions
 
-* item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-* item[=].item[=].text = "Titratie"
-* item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, titratie"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
-
-// //if you'd want to change previous question to a yes/no radio button:
-// * item[=].item[+].linkId = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-// * item[=].item[=].text = "Titratie"
-// * item[=].item[=].code = $sct#713838004 "optimaliseren van medicatie"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].repeats = false
-// * item[=].item[=].answerValueSet = "#YesNo"
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#radio-button
-// * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-// * item[=].item[=].extension[=].valueCode = #horizontal
-
-* item[=].item[+].linkId = "dcba2829-32d8-4390-b1d4-32a5fefda539"
-* item[=].item[=].text = "Recompensatie"
-* item[=].item[=].code = $sct#308118002 "behandelen van hartfalen"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, recompensatie"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
-
-* item[+].linkId = "170292e5-3163-43b4-88af-affb3e4c27ab"
-* item[=].type = #group
-* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableBehavior = #any
-
-
-* item[=].item[+].linkId = "4e973bcb-bbbb-4a9f-877b-fbf45ab94361"
-* item[=].item[=].text = "Streefgewicht"
-* item[=].item[=].required = true
-* item[=].item[=].type = #decimal
-* item[=].item[=].code = $sct#1078215008 "Target body weight"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-* item[=].item[=].extension[=].valueCoding = $unitsofmeasure#kg "kg"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].item[=].extension[=].valueString = "Streefgewicht '0.0'"
-
-
-* item[=].item[+].linkId = "135aec2f-e410-4668-9a26-f745dc1789af"
-* item[=].item[=].text = "Ziekenhuispatiënt"
-* item[=].item[=].code = $sct#266938001 "ziekenhuispatiënt"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, patiënt is opgenomen geweest"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
-
-* item[=].item[+].linkId = "be4b671d-f91f-4fc3-a6d8-fcafa8e67161"
-* item[=].item[=].text = "Notitie"
-* item[=].item[=].code = $sct#11221000146107 "notitie (gegevensobject)"
-* item[=].item[=].type = #text
-* item[=].item[=].repeats = false
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].item[=].extension.valueString = "Notitie (optioneel)"
-* item[=].item[=].item[+].linkId = "c230b150-c66f-4892-b9f6-5fff067962ee"
-* item[=].item[=].item[=].text = "Voorbeelden: patiënt is slechthorend, patiënt wordt geholpen door mantelzorger."
-* item[=].item[=].item[=].type = #display
-* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory"
-* item[=].item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-display-category#instructions
-
-* item[+].linkId = "2bc0b73f-506a-48a4-994d-fe355a5825f3"
-* item[=].text = "Begeleiding bij onboarding"
-* item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-style"
-* item[=].text.extension[=].valueString = "font-size: 1.25rem;"
-* item[=].type = #group
-* item[=].enableWhen[+].question = "245f3b7e-47d2-4b78-b751-fb04f38b17b9"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#58158008
-* item[=].enableWhen[+].question = "1b81f13b-923e-4fc8-b758-08b3f172b2de"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableWhen[+].question = "dcba2829-32d8-4390-b1d4-32a5fefda539"
-* item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = $sct#373066001
-* item[=].enableBehavior = #any
-
-
-* item[=].item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
-* item[=].item[=].text = "Moeite met apps"
-* item[=].item[=].code = $sct#761731000000100 "moeite met gebruiken van personal computer"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $sct#373066001 "ja, patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
+* item[+].linkId = "295a22d7-d0ff-4546-b2a0-ce46beeba086"
+* item[=].text = "Begeleiding"
+* item[=].code = $sct#761731000000100 "moeite met gebruiken van personal computer"
+* item[=].type = #choice
+* item[=].repeats = true
+* item[=].answerOption.valueCoding = $sct#373066001 "Ja, de patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
 
 
 
