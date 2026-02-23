@@ -72,6 +72,24 @@ Usage: #example
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].item[=].extension[=].valueString = "ACQ '0.0'"
 
+* item[=].item[+].linkId = "b54871e3-1b87-4705-a6d3-d0f93a61d9cc" //extra-parameters
+* item[=].item[=].text = "Biologicals medicatie"
+* item[=].item[=].required = true
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = false
+* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerString = "Biologicals - wekelijks"
+* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerString = "Biologicals - maandelijks"
+* item[=].item[=].enableWhen[+].question = "da65ffd8-fb90-4918-becf-dfe0439577d8"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerString = "Biologicals - remissie"
+* item[=].item[=].enableBehavior = #any
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
+* item[=].item[=].extension[=].valueString = "Bijv. Dupilumab of Benralizumab"
+
 * item[=].item[+].linkId = "28755b2e-7fb4-4f4a-a104-4a7cbdf4eea6" //extra-parameters
 * item[=].item[=].text = "Startdatum biological"
 * item[=].item[=].required = true
