@@ -585,7 +585,7 @@
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Bijv. Dupilumab of Benralizumab"
+                    "valueString": "Bv. Dupilumab of Benralizumab"
                   }
                 ]
               },
