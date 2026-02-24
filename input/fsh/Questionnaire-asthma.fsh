@@ -88,7 +88,7 @@ Usage: #example
 * item[=].item[=].enableWhen[=].answerString = "Biologicals - remissie"
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
-* item[=].item[=].extension[=].valueString = "Bv. Dupilumab of Benralizumab"
+* item[=].item[=].extension[=].valueString = "Bijv. Dupilumab"
 
 * item[=].item[+].linkId = "28755b2e-7fb4-4f4a-a104-4a7cbdf4eea6" //extra-parameters
 * item[=].item[=].text = "Startdatum biological"
