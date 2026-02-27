@@ -203,6 +203,37 @@
           ]
         },
         {
+          "linkId": "b54871e3-1b87-4705-a6d3-d0f93a61d9cc",
+          "text": "Biologicals medicatie",
+          "required": true,
+          "type": "string",
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - wekelijks"
+            },
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - maandelijks"
+            },
+            {
+              "question": "da65ffd8-fb90-4918-becf-dfe0439577d8",
+              "operator": "=",
+              "answerString": "Biologicals - remissie"
+            }
+          ],
+          "enableBehavior": "any",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Bijv. Dupilumab"
+            }
+          ]
+        },
+        {
           "linkId": "28755b2e-7fb4-4f4a-a104-4a7cbdf4eea6",
           "text": "Startdatum biological",
           "required": true,
