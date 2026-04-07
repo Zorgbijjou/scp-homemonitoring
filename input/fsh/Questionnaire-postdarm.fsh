@@ -26,7 +26,7 @@ Usage: #example
 * item[=].code = $sct#64572001 "aandoening"
 * item[=].type = #choice
 * item[=].readOnly = true
-* item[=].answerOption[0].valueCoding = $sct#85919009 "aandoening van darm (aandoening)"
+* item[=].answerOption[0].valueCoding = $sct#85919009 "Rondom darmoperatie"
 * item[=].answerOption[=].initialSelected = true
 
 * item[+].linkId = "b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e"

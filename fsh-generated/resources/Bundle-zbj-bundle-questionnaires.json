@@ -1123,7 +1123,7 @@
                 "valueCoding": {
                   "code": "85919009",
                   "system": "http://snomed.info/sct",
-                  "display": "aandoening van darm (aandoening)"
+                  "display": "Rondom darmoperatie"
                 },
                 "initialSelected": true
               }
