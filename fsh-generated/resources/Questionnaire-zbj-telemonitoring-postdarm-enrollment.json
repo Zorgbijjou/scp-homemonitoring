@@ -74,9 +74,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "174432000",
+            "code": "85919009",
             "system": "http://snomed.info/sct",
-            "display": "darmoperatie (verrichting)"
+            "display": "aandoening van darm (aandoening)"
           }
         ]
       }
@@ -98,9 +98,9 @@
       "answerOption": [
         {
           "valueCoding": {
-            "code": "174432000",
+            "code": "85919009",
             "system": "http://snomed.info/sct",
-            "display": "Rondom darmoperatie"
+            "display": "aandoening van darm (aandoening)"
           },
           "initialSelected": true
         }
@@ -145,9 +145,9 @@
       "text": "Operatiedatum (indien bekend)",
       "code": [
         {
-          "code": "432213005",
+          "code": "439272007",
           "system": "http://snomed.info/sct",
-          "display": "datum van de verrichting"
+          "display": "datum van verrichting (waarneembare entiteit)"
         }
       ],
       "type": "date",

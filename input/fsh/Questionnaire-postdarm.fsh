@@ -19,14 +19,14 @@ Usage: #example
 * useContext[+].code = $usage-context-type#focus
 * useContext[=].valueCodeableConcept = $sct#719858009 "monitoren via telegeneeskunde (regime/therapie)"
 * useContext[+].code = $usage-context-type#focus
-* useContext[=].valueCodeableConcept = $sct#174432000 "darmoperatie (verrichting)"
+* useContext[=].valueCodeableConcept = $sct#85919009 "aandoening van darm (aandoening)"
 
 * item[0].linkId = "a1e3c5d7-4b6f-8a2e-9c0d-1b3e5a7c9f2d"
 * item[=].text = "Zorgpad"
 * item[=].code = $sct#64572001 "aandoening"
 * item[=].type = #choice
 * item[=].readOnly = true
-* item[=].answerOption[0].valueCoding = $sct#174432000 "Rondom darmoperatie"
+* item[=].answerOption[0].valueCoding = $sct#85919009 "aandoening van darm (aandoening)"
 * item[=].answerOption[=].initialSelected = true
 
 * item[+].linkId = "b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e"
@@ -41,7 +41,7 @@ Usage: #example
 
 * item[+].linkId = "c3a5e7f9-6d8b-0c4a-1e2f-3d5a7c9b0e1f"
 * item[=].text = "Operatiedatum (indien bekend)"
-* item[=].code = $sct#432213005 "datum van de verrichting"
+* item[=].code = $sct#439272007 "datum van verrichting (waarneembare entiteit)"
 * item[=].type = #date
 * item[=].required = false
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
