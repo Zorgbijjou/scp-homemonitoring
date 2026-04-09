@@ -112,6 +112,15 @@
                 "display": "chronische obstructieve longaandoening (aandoening)"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "code": "85919009",
+                "system": "http://snomed.info/sct",
+                "display": "aandoening van darm (aandoening)"
+              }
+            ]
           }
         ]
       },

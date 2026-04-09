@@ -18,6 +18,7 @@ Description: "Defines which services are provided by the HealthcareService for t
 * type[+] = $sct#304527002 "acuut astma (aandoening)"
 * type[+] = $sct#389145006 "allergisch astma (aandoening)"
 * type[+] = $sct#13645005 "chronische obstructieve longaandoening (aandoening)"
+* type[+] = $sct#85919009 "aandoening van darm (aandoening)"
 // 13645005 (COPD)
 //    84114007 (Hartfalen)
 //    195979001, 304527002, 389145006 (Astma)
@@ -25,7 +26,7 @@ Description: "Defines which services are provided by the HealthcareService for t
 //    11687002 (Zwangerschapsdiabetes)
 //    46635009, 1290118005 (Diabetes type 1)
 //    230690007 (Post-CVA)
-//    (Post-darm)
+//    85919009 (Post-darm)
 //    49436004 (Atriumfibrilleren)
 //    16114001 (Enkelfractuur)
 //    125605004 (VFC)
