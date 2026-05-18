@@ -19,6 +19,7 @@ Description: "Defines which services are provided by the HealthcareService for t
 * type[+] = $sct#389145006 "allergisch astma (aandoening)"
 * type[+] = $sct#13645005 "chronische obstructieve longaandoening (aandoening)"
 * type[+] = $sct#85919009 "aandoening van darm (aandoening)"
+* type[+] = $sct#230690007 "cerebrovasculair accident (aandoening)"
 // 13645005 (COPD)
 //    84114007 (Hartfalen)
 //    195979001, 304527002, 389145006 (Astma)

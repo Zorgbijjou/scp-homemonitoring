@@ -121,6 +121,15 @@
                 "display": "aandoening van darm (aandoening)"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "code": "230690007",
+                "system": "http://snomed.info/sct",
+                "display": "cerebrovasculair accident (aandoening)"
+              }
+            ]
           }
         ]
       },
