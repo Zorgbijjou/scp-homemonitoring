@@ -124,6 +124,15 @@
           "display": "cerebrovasculair accident (aandoening)"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "code": "11687002",
+          "system": "http://snomed.info/sct",
+          "display": "zwangerschapsdiabetes (aandoening)"
+        }
+      ]
     }
   ]
 }
