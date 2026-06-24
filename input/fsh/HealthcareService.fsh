@@ -21,6 +21,7 @@ Description: "Defines which services are provided by the HealthcareService for t
 * type[+] = $sct#85919009 "aandoening van darm (aandoening)"
 * type[+] = $sct#230690007 "cerebrovasculair accident (aandoening)"
 * type[+] = $sct#11687002 "zwangerschapsdiabetes (aandoening)"
+* type[+] = $sct#49436004 "Atriumfibrilleren (aandoening)"
 // 13645005 (COPD)
 //    84114007 (Hartfalen)
 //    195979001, 304527002, 389145006 (Astma)

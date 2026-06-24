@@ -10,6 +10,7 @@ Description: "Bundle containing Questionnaire instances"
 * insert BundleEntry(zbj-telemonitoring-postdarm-enrollment, #PUT, Questionnaire?identifier=urn:uuid:7d3e5a4b-2c8f-4e9d-b1a6-3f7c2e0d8b5a)
 * insert BundleEntry(zbj-telemonitoring-postcva-enrollment, #PUT, Questionnaire?identifier=urn:uuid:2184eeee-e528-4534-ab7c-369c119653c1)
 * insert BundleEntry(zbj-telemonitoring-dmg-enrollment, #PUT, Questionnaire?identifier=urn:uuid:c55ca8ee-8b29-4788-9f6a-26155659e9f5)
+* insert BundleEntry(zbj-telemonitoring-atrial-fibrilation-enrollment, #PUT, Questionnaire?identifier=urn:uuid:c55ca8ee-8b29-4788-9f6a-26155659e9f5)
 
 
 Instance: YesNo
