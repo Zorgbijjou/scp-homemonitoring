@@ -1,0 +1,1286 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "zbj-telemonitoring-atrial-fibrilation-enrollment",
+  "meta": {
+    "tag": [
+      {
+        "code": "4.0.1",
+        "system": "http://hl7.org/fhir/FHIR-version"
+      }
+    ]
+  },
+  "language": "nl-NL",
+  "title": "Vragenlijst voor aanmelding van patienten met atriumfibrileren voor thuismonitoring",
+  "url": "https://zorgbijjou.github.io/scp-homemonitoring/Questionnaire-zbj-telemonitoring-artial-fibrilation-enrollment|0.5",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:a56b90af-69a3-4bbb-908a-51ddae553092"
+    }
+  ],
+  "status": "active",
+  "publisher": "Zorg bij jou B.V.",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://zorgbijjou.nl"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "date": "2026-06-26",
+  "effectivePeriod": {
+    "start": "2026-08-01"
+  },
+  "useContext": [
+    {
+      "code": {
+        "code": "task",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "OE",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "display": "order entry task"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "code": "focus",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "719858009",
+            "system": "http://snomed.info/sct",
+            "display": "monitoren via telegeneeskunde (regime/therapie)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "code": "focus",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "49436004",
+            "system": "http://snomed.info/sct",
+            "display": "Boezemfibrilleren (aandoening)"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/targetConstraint",
+      "extension": [
+        {
+          "url": "key",
+          "valueId": "no-pacemaker"
+        },
+        {
+          "url": "severity",
+          "valueCode": "error"
+        },
+        {
+          "url": "expression",
+          "valueExpression": {
+            "language": "text/fhirpath",
+            "expression": "%resource.item.where(linkId='ff69bb6f-cbc2-48f2-9cae-d465c95e53d0').answer.valueBoolean = true"
+          }
+        },
+        {
+          "url": "human",
+          "valueString": "Een patiënt met pacemaker komt niet in aanmerking voor thuismonitoring. Vervolg de zorg via het reguliere behandeltraject."
+        },
+        {
+          "url": "location",
+          "valueString": "Questionnaire.item.where(linkId='ff69bb6f-cbc2-48f2-9cae-d465c95e53d0')"
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/targetConstraint",
+      "extension": [
+        {
+          "url": "key",
+          "valueId": "flutter-or-AT"
+        },
+        {
+          "url": "severity",
+          "valueCode": "error"
+        },
+        {
+          "url": "expression",
+          "valueExpression": {
+            "language": "text/fhirpath",
+            "expression": "%resource.repeat(item).where(linkId='1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8').answer.valueBoolean = true and %resource.repeat(item).where(linkId='71fc98ad-2dba-4ecd-91d4-a70807dc72ac').answer.valueString = 'Pre-ECV'"
+          }
+        },
+        {
+          "url": "human",
+          "valueString": "Een patiënt met flutter of atriale tachycardie komt niet in aanmerking voor thuismonitoring. Vervolg de zorg via het reguliere behandeltraject."
+        },
+        {
+          "url": "location",
+          "valueString": "Questionnaire.repeat(item).where(linkId='1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8')"
+        }
+      ]
+    }
+  ],
+  "item": [
+    {
+      "linkId": "61695e96-c574-453f-8722-8d5e9b22e5be",
+      "text": "Zorgpad",
+      "code": [
+        {
+          "code": "64572001",
+          "system": "http://snomed.info/sct",
+          "display": "aandoening"
+        }
+      ],
+      "type": "choice",
+      "readOnly": true,
+      "answerOption": [
+        {
+          "initialSelected": true,
+          "valueString": "Boezemfibrilleren"
+        }
+      ]
+    },
+    {
+      "linkId": "ff69bb6f-cbc2-48f2-9cae-d465c95e53d0",
+      "text": "Heeft de patiënt een pacemaker?",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "linkId": "39abcb98-97c7-43b5-bbab-13646b6db6e4",
+      "type": "group",
+      "enableWhen": [
+        {
+          "question": "ff69bb6f-cbc2-48f2-9cae-d465c95e53d0",
+          "operator": "=",
+          "answerBoolean": false
+        }
+      ],
+      "item": [
+        {
+          "code": [
+            {
+              "code": "243120004",
+              "system": "http://snomed.info/sct",
+              "display": "Protocolvraag (regime/therapie)"
+            }
+          ],
+          "linkId": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+          "text": "Meetprotocol",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+              "valueString": "<style>div:has(> div[data-linkid=\"71fc98ad-2dba-4ecd-91d4-a70807dc72ac\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Meetprotocol"
+            }
+          ],
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueString": "Paroxysmaal AF (PAF)"
+            },
+            {
+              "valueString": "Pre-ECV"
+            },
+            {
+              "valueString": "Klachten monitoring AF"
+            },
+            {
+              "valueString": "Pre en Post-ablatie"
+            },
+            {
+              "valueString": "Rate control"
+            },
+            {
+              "valueString": "Post-ECV"
+            }
+          ]
+        },
+        {
+          "linkId": "7f151cd0-11f4-4ddb-a7e6-d206d52b4e8b",
+          "text": "Wat is het beleid bij de klachten?",
+          "required": true,
+          "type": "open-choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "radio-button",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+              "valueString": "Anders, namelijk"
+            }
+          ],
+          "answerOption": [
+            {
+              "valueString": "Niets doen en afwachten"
+            },
+            {
+              "valueString": "Pill in the pocket innemen"
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+              "operator": "=",
+              "answerString": "Paroxysmaal AF (PAF)"
+            }
+          ]
+        },
+        {
+          "linkId": "fb6e09a5-386f-4330-ac7c-0c6c17ce234c",
+          "required": true,
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "Anders namelijk"
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "7f151cd0-11f4-4ddb-a7e6-d206d52b4e8b",
+              "operator": "=",
+              "answerString": "Anders, namelijk"
+            }
+          ]
+        },
+        {
+          "linkId": "8b74cd45-0dcb-45de-b22a-30adf1aefab3",
+          "type": "group",
+          "enableBehavior": "all",
+          "enableWhen": [
+            {
+              "question": "7f151cd0-11f4-4ddb-a7e6-d206d52b4e8b",
+              "operator": "=",
+              "answerString": "Pill in the pocket innemen"
+            },
+            {
+              "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+              "operator": "=",
+              "answerString": "Paroxysmaal AF (PAF)"
+            }
+          ],
+          "item": [
+            {
+              "linkId": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+              "text": "Welke pill in the pocket?",
+              "required": true,
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueString": "Verapamil kortwerkend - 1 tablet"
+                },
+                {
+                  "valueString": "Verapamil kortwerkend - 2 tabletten"
+                },
+                {
+                  "valueString": "Metroprolol kortwerkend - 1 tablet"
+                },
+                {
+                  "valueString": "Metroprolol kortwerkend - 2 tabletten"
+                },
+                {
+                  "valueString": "Flecainide kortwerkend - 1 tablet"
+                },
+                {
+                  "valueString": "Flecainide kortwerkend - 2 tabletten"
+                },
+                {
+                  "valueString": "Solatol 1 tablet"
+                },
+                {
+                  "valueString": "Solatol 2 tabletten"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                  "valueString": "<style>div:has(> div[data-linkid=\"27f19772-d2fe-4d3e-8f93-ab16ad948a23\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Welke pill in the pocket?"
+                }
+              ]
+            },
+            {
+              "linkId": "134abd7b-b5da-482b-a794-9fa5b1025cfe",
+              "text": "Welke dosering?",
+              "required": true,
+              "type": "open-choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                  "valueCode": "vertical"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "radio-button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                  "valueString": "Anders, namelijk"
+                }
+              ],
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Verapamil kortwerkend - 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Verapamil kortwerkend - 2 tabletten"
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueString": "40 mg"
+                },
+                {
+                  "valueString": "80 mg"
+                }
+              ]
+            },
+            {
+              "linkId": "feca4c2f-5b14-4b40-8ae8-b0596956257a",
+              "required": true,
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Anders namelijk"
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "134abd7b-b5da-482b-a794-9fa5b1025cfe",
+                  "operator": "=",
+                  "answerString": "Anders, namelijk"
+                }
+              ]
+            },
+            {
+              "linkId": "37bde553-9376-481e-92f3-dba979aad7a7",
+              "text": "Zo nodig herhalen na hoeveel uur?",
+              "type": "integer",
+              "required": true,
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Verapamil kortwerkend - 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Verapamil kortwerkend - 2 tabletten"
+                }
+              ]
+            },
+            {
+              "linkId": "26e84dfb-b26e-46f6-a2f8-b4ac63a66107",
+              "text": "Welke dosering?",
+              "required": true,
+              "type": "open-choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                  "valueCode": "vertical"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "radio-button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                  "valueString": "Anders, namelijk"
+                }
+              ],
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Metroprolol kortwerkend - 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Metroprolol kortwerkend - 2 tabletten"
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueString": "25 mg"
+                },
+                {
+                  "valueString": "50 mg"
+                }
+              ]
+            },
+            {
+              "linkId": "ab639196-5a43-42a8-af57-997946eba0b5",
+              "required": true,
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Anders namelijk"
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "26e84dfb-b26e-46f6-a2f8-b4ac63a66107",
+                  "operator": "=",
+                  "answerString": "Anders, namelijk"
+                }
+              ]
+            },
+            {
+              "linkId": "189bdc00-cfe5-491b-ac89-d90b735ba5b1",
+              "text": "Zo nodig herhalen na hoeveel uur?",
+              "required": true,
+              "type": "integer",
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Metroprolol kortwerkend - 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Metroprolol kortwerkend - 2 tabletten"
+                }
+              ]
+            },
+            {
+              "linkId": "27e5fb2e-ce3d-4182-91d9-982855e0d371",
+              "text": "Welke dosering?",
+              "required": true,
+              "type": "open-choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                  "valueCode": "vertical"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "radio-button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                  "valueString": "Anders, namelijk"
+                }
+              ],
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Flecainide kortwerkend - 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Flecainide kortwerkend - 2 tabletten"
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueString": "100 mg"
+                }
+              ]
+            },
+            {
+              "linkId": "0ef921f4-16ec-4cf7-b6f2-3762440e7801",
+              "required": true,
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Anders namelijk"
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "27e5fb2e-ce3d-4182-91d9-982855e0d371",
+                  "operator": "=",
+                  "answerString": "Anders, namelijk"
+                }
+              ]
+            },
+            {
+              "linkId": "805edc15-4336-4c26-bb89-d511a3d6d2ae",
+              "text": "Welke dosering?",
+              "required": true,
+              "type": "open-choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                  "valueCode": "vertical"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "radio-button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                  "valueString": "Anders, namelijk"
+                }
+              ],
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Solatol 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Solatol 2 tabletten"
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueString": "40 mg"
+                },
+                {
+                  "valueString": "80 mg"
+                }
+              ]
+            },
+            {
+              "linkId": "d198c8ed-ec31-47e0-b712-2c280aabec0f",
+              "required": true,
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Anders namelijk"
+                }
+              ],
+              "enableWhen": [
+                {
+                  "question": "805edc15-4336-4c26-bb89-d511a3d6d2ae",
+                  "operator": "=",
+                  "answerString": "Anders, namelijk"
+                }
+              ]
+            },
+            {
+              "linkId": "44782d3b-3b06-471b-9e30-6e4c2a1b3764",
+              "text": "Zo nodig herhalen na hoeveel uur?",
+              "type": "integer",
+              "enableBehavior": "any",
+              "enableWhen": [
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Solatol 1 tablet"
+                },
+                {
+                  "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
+                  "operator": "=",
+                  "answerString": "Solatol 2 tabletten"
+                }
+              ]
+            },
+            {
+              "linkId": "2920ac88-872e-4c6f-a15a-18d694696e61",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueString": "De patiënt heeft een tweede pill in the pocket"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "check-box",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "47d96451-b8dc-4755-a12e-076c9cb9cd91",
+              "type": "group",
+              "enableBehavior": "all",
+              "enableWhen": [
+                {
+                  "question": "2920ac88-872e-4c6f-a15a-18d694696e61",
+                  "operator": "=",
+                  "answerString": "De patiënt heeft een tweede pill in the pocket"
+                },
+                {
+                  "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+                  "operator": "=",
+                  "answerString": "Paroxysmaal AF (PAF)"
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "836b1e03-129c-47e5-aeb8-dd788c1dc311",
+                  "type": "display",
+                  "text": "",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                        "valueString": "font-weight: bold;"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                      "valueString": "<style>div:has(> div[data-linkid=\"836b1e03-129c-47e5-aeb8-dd788c1dc311\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                  "text": "Welke pill in the pocket",
+                  "required": true,
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueString": "Verapamil kortwerkend - 1 tablet"
+                    },
+                    {
+                      "valueString": "Verapamil kortwerkend - 2 tabletten"
+                    },
+                    {
+                      "valueString": "Metroprolol kortwerkend - 1 tablet"
+                    },
+                    {
+                      "valueString": "Metroprolol kortwerkend - 2 tabletten"
+                    },
+                    {
+                      "valueString": "Flecainide kortwerkend - 1 tablet"
+                    },
+                    {
+                      "valueString": "Flecainide kortwerkend - 2 tabletten"
+                    },
+                    {
+                      "valueString": "Solatol 1 tablet"
+                    },
+                    {
+                      "valueString": "Solatol 2 tabletten"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "295f7d5f-97d8-4093-b925-45a83da854e2",
+                  "text": "Welke dosering?",
+                  "required": true,
+                  "type": "open-choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                      "valueCode": "vertical"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                      "valueString": "Anders, namelijk <br /> "
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "code": "radio-button",
+                            "system": "http://hl7.org/fhir/questionnaire-item-control"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                      "valueString": "Anders, namelijk"
+                    }
+                  ],
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Verapamil kortwerkend - 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Verapamil kortwerkend - 2 tabletten"
+                    }
+                  ],
+                  "answerOption": [
+                    {
+                      "valueString": "40 mg"
+                    },
+                    {
+                      "valueString": "80 mg"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "e5b742ff-d503-4eb8-9f6a-497eb896daec",
+                  "required": true,
+                  "type": "string",
+                  "initial": [
+                    {
+                      "valueString": "Anders namelijk"
+                    }
+                  ],
+                  "enableWhen": [
+                    {
+                      "question": "295f7d5f-97d8-4093-b925-45a83da854e2",
+                      "operator": "=",
+                      "answerString": "Anders, namelijk"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "6d28a3e1-5fb9-43d0-92d3-84860c8a1a75",
+                  "text": "Zo nodig herhalen na hoeveel uur?",
+                  "required": true,
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                      "valueCode": "horizontal"
+                    }
+                  ],
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Verapamil kortwerkend - 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Verapamil kortwerkend - 2 tabletten"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "93263165-130a-4176-933a-20fb29a0ab6e",
+                  "text": "Welke dosering?",
+                  "required": true,
+                  "type": "open-choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                      "valueCode": "vertical"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "code": "radio-button",
+                            "system": "http://hl7.org/fhir/questionnaire-item-control"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                      "valueString": "Anders, namelijk"
+                    }
+                  ],
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Metroprolol kortwerkend - 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Metroprolol kortwerkend - 2 tabletten"
+                    }
+                  ],
+                  "answerOption": [
+                    {
+                      "valueString": "25 mg"
+                    },
+                    {
+                      "valueString": "50 mg"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "64e52812-0645-4e06-88c1-df80b7d20ad8",
+                  "required": true,
+                  "type": "string",
+                  "initial": [
+                    {
+                      "valueString": "Anders namelijk"
+                    }
+                  ],
+                  "enableWhen": [
+                    {
+                      "question": "93263165-130a-4176-933a-20fb29a0ab6e",
+                      "operator": "=",
+                      "answerString": "Anders, namelijk"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "4ef30d7c-5367-480e-8c10-ac9a6395a474",
+                  "text": "Zo nodig herhalen na hoeveel uur?",
+                  "required": true,
+                  "type": "integer",
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Metroprolol kortwerkend - 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Metroprolol kortwerkend - 2 tabletten"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "e8c4b0a4-bab9-4849-a52d-aa89b2be4c7c",
+                  "text": "Welke dosering?",
+                  "required": true,
+                  "type": "open-choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                      "valueCode": "vertical"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "code": "radio-button",
+                            "system": "http://hl7.org/fhir/questionnaire-item-control"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                      "valueString": "Anders, namelijk"
+                    }
+                  ],
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Flecainide kortwerkend - 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Flecainide kortwerkend - 2 tabletten"
+                    }
+                  ],
+                  "answerOption": [
+                    {
+                      "valueString": "100 mg"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "57785bd6-4a85-4bad-b0bc-b2f00698c655",
+                  "required": true,
+                  "type": "string",
+                  "initial": [
+                    {
+                      "valueString": "Anders namelijk"
+                    }
+                  ],
+                  "enableWhen": [
+                    {
+                      "question": "e8c4b0a4-bab9-4849-a52d-aa89b2be4c7c",
+                      "operator": "=",
+                      "answerString": "Anders, namelijk"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f",
+                  "text": "Welke dosering?",
+                  "required": true,
+                  "type": "open-choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                      "valueCode": "vertical"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "code": "radio-button",
+                            "system": "http://hl7.org/fhir/questionnaire-item-control"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                      "valueString": "Anders, namelijk"
+                    }
+                  ],
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Solatol 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Solatol 2 tabletten"
+                    }
+                  ],
+                  "answerOption": [
+                    {
+                      "valueString": "40 mg"
+                    },
+                    {
+                      "valueString": "80 mg"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "02ee563f-b7a1-4713-875f-383e52297689",
+                  "required": true,
+                  "type": "string",
+                  "initial": [
+                    {
+                      "valueString": "Anders namelijk"
+                    }
+                  ],
+                  "enableWhen": [
+                    {
+                      "question": "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f",
+                      "operator": "=",
+                      "answerString": "Anders, namelijk"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "68f821a5-ed4d-4d35-8c94-cf6c8e962928",
+                  "text": "Zo nodig herhalen na hoeveel uur?",
+                  "type": "integer",
+                  "enableBehavior": "any",
+                  "enableWhen": [
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Solatol 1 tablet"
+                    },
+                    {
+                      "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
+                      "operator": "=",
+                      "answerString": "Solatol 2 tabletten"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "95bea39f-3a48-45c7-bd5c-e87d12e1afb5",
+          "text": "Is er risico op tachycardiomyopathie (tcm)?",
+          "required": true,
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "horizontal"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "radio-button",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueString": "Ja (wekelijks meten)"
+            },
+            {
+              "valueString": "Nee (maandelijks meten)"
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+              "operator": "=",
+              "answerString": "Paroxysmaal AF (PAF)"
+            }
+          ]
+        },
+        {
+          "linkId": "af60d0f9-eb1e-45df-bb73-6bf501c13636",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+              "operator": "=",
+              "answerString": "Pre-ECV"
+            }
+          ],
+          "text": " ",
+          "item": [
+            {
+              "linkId": "1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8",
+              "text": "Heeft de patiënt een flutter of atriale tachycardie?",
+              "required": true,
+              "type": "boolean",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                  "valueString": "<style>div:has(> div[data-linkid=\"1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Heeft de patiënt een flutter of atriale tachycardie?"
+                }
+              ]
+            },
+            {
+              "linkId": "e918123c-c6db-42f6-a30c-3df41280ee15",
+              "text": "Datum ECV",
+              "type": "date",
+              "required": true,
+              "enableWhen": [
+                {
+                  "question": "4721a5b7-8343-4bde-9b4b-50da53c29178",
+                  "operator": "exists",
+                  "answerBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "4721a5b7-8343-4bde-9b4b-50da53c29178",
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueString": "Datum ECV is nog niet bekend"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "check-box",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "058dba5a-c7c0-4247-ba24-e3fef1443e0b",
+          "text": "Datum ECV",
+          "required": true,
+          "type": "date",
+          "enableWhen": [
+            {
+              "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+              "operator": "=",
+              "answerString": "Post-ECV"
+            }
+          ]
+        },
+        {
+          "linkId": "c2f0b347-2977-4541-8177-99a4f5079b6e",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
+              "operator": "=",
+              "answerString": "Pre en Post-ablatie"
+            }
+          ],
+          "text": " ",
+          "item": [
+            {
+              "linkId": "1c2e30f2-a71d-4d97-9bc6-0580012b4900",
+              "text": "Datum Ablatie (PVI)",
+              "required": true,
+              "type": "date",
+              "enableWhen": [
+                {
+                  "question": "d88c5d33-a24a-42db-a708-418bbefc0efc",
+                  "operator": "exists",
+                  "answerBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "d88c5d33-a24a-42db-a708-418bbefc0efc",
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueString": "Datum is nog niet bekend"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "check-box",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                  "valueString": "<style>div:has(> div[data-linkid=\"d88c5d33-a24a-42db-a708-418bbefc0efc\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "89d7580e-70f6-498d-873a-bbd58ac0b699",
+          "text": "Notitie (optioneel)",
+          "code": [
+            {
+              "code": "11221000146107",
+              "system": "http://snomed.info/sct",
+              "display": "notitie (gegevensobject)"
+            }
+          ],
+          "type": "text",
+          "repeats": false,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Notitie (optioneel)"
+            }
+          ]
+        },
+        {
+          "linkId": "55871c14-8b10-420b-a676-0a2ac2779c2c",
+          "text": "Begeleiding",
+          "code": [
+            {
+              "code": "761731000000100",
+              "system": "http://snomed.info/sct",
+              "display": "moeite met gebruiken van personal computer"
+            }
+          ],
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "373066001",
+                "system": "http://snomed.info/sct",
+                "display": "Ja, de patiënt heeft hulp nodig bij het downloaden en inloggen in de app"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "check-box",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

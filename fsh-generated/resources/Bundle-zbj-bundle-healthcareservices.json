@@ -139,6 +139,15 @@
                 "display": "zwangerschapsdiabetes (aandoening)"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "code": "49436004",
+                "system": "http://snomed.info/sct",
+                "display": "Atriumfibrilleren (aandoening)"
+              }
+            ]
           }
         ]
       },
