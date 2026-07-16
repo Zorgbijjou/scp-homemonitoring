@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TIDE.Tests\TIDE.Tests.csproj" />
+  <Project Path="TIDE\TIDE.csproj" />
+</Solution>
