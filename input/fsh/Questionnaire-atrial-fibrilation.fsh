@@ -131,15 +131,6 @@ Usage: #example
       * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
       * valueString = "Anders, namelijk"
 
-  * item[+]
-    * linkId = "fb6e09a5-386f-4330-ac7c-0c6c17ce234c"
-    * required = true
-    * type = #string
-    * initial.valueString = "Anders namelijk"
-    * enableWhen[+].question = "7f151cd0-11f4-4ddb-a7e6-d206d52b4e8b"
-    * enableWhen[=].operator = #=
-    * enableWhen[=].answerString = "Anders, namelijk"
-  
   // -----------------------------------
   // |    pill-in-the-pocket group     |
   // -----------------------------------
@@ -211,15 +202,6 @@ Usage: #example
         * valueString = "Anders, namelijk"
 
     * item[+]
-      * linkId = "feca4c2f-5b14-4b40-8ae8-b0596956257a"
-      * required = true
-      * type = #string
-      * initial.valueString = "Anders namelijk"
-      * enableWhen[+].question = "134abd7b-b5da-482b-a794-9fa5b1025cfe"
-      * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Anders, namelijk"
-  
-    * item[+]
       * linkId = "37bde553-9376-481e-92f3-dba979aad7a7"
       * text = "Zo nodig herhalen na hoeveel uur?"  
       * type = #integer
@@ -260,15 +242,6 @@ Usage: #example
         * valueString = "Anders, namelijk"
 
     * item[+]
-      * linkId = "ab639196-5a43-42a8-af57-997946eba0b5"
-      * required = true
-      * type = #string
-      * initial.valueString = "Anders namelijk"
-      * enableWhen[+].question = "26e84dfb-b26e-46f6-a2f8-b4ac63a66107"
-      * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Anders, namelijk"
-
-    * item[+]
       * linkId = "189bdc00-cfe5-491b-ac89-d90b735ba5b1"
       * text = "Zo nodig herhalen na hoeveel uur?"  
       * required = true
@@ -306,16 +279,6 @@ Usage: #example
       * extension[+]
         * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
         * valueString = "Anders, namelijk"
-
-    * item[+]
-      * linkId = "0ef921f4-16ec-4cf7-b6f2-3762440e7801"
-      * required = true
-      * type = #string
-      * initial.valueString = "Anders namelijk"
-      * enableWhen[+].question = "27e5fb2e-ce3d-4182-91d9-982855e0d371"
-      * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Anders, namelijk"
-
   
   // Solatol
   // Dosering
@@ -344,16 +307,6 @@ Usage: #example
         * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
         * valueString = "Anders, namelijk"
 
-    * item[+]
-      * linkId = "d198c8ed-ec31-47e0-b712-2c280aabec0f"
-      * required = true
-      * type = #string
-      * initial.valueString = "Anders namelijk"
-      * enableWhen[+].question = "805edc15-4336-4c26-bb89-d511a3d6d2ae"
-      * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Anders, namelijk"
-
-  
     * item[+]
       * linkId = "44782d3b-3b06-471b-9e30-6e4c2a1b3764"
       * text = "Zo nodig herhalen na hoeveel uur?"  
@@ -449,15 +402,6 @@ Usage: #example
           * valueString = "Anders, namelijk"
 
       * item[+]
-        * linkId = "e5b742ff-d503-4eb8-9f6a-497eb896daec"
-        * required = true
-        * type = #string
-        * initial.valueString = "Anders namelijk"
-        * enableWhen[+].question = "295f7d5f-97d8-4093-b925-45a83da854e2"
-        * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Anders, namelijk"
-
-      * item[+]
         * linkId = "6d28a3e1-5fb9-43d0-92d3-84860c8a1a75"
         * text = "Zo nodig herhalen na hoeveel uur?"  
         * required = true        
@@ -501,15 +445,6 @@ Usage: #example
           * valueString = "Anders, namelijk"
 
       * item[+]
-        * linkId = "64e52812-0645-4e06-88c1-df80b7d20ad8"
-        * required = true
-        * type = #string
-        * initial.valueString = "Anders namelijk"
-        * enableWhen[+].question = "93263165-130a-4176-933a-20fb29a0ab6e"
-        * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Anders, namelijk"
-    
-      * item[+]
         * linkId = "4ef30d7c-5367-480e-8c10-ac9a6395a474"
         * text = "Zo nodig herhalen na hoeveel uur?"  
         * required = true        
@@ -548,15 +483,6 @@ Usage: #example
           * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
           * valueString = "Anders, namelijk"
 
-      * item[+]
-        * linkId = "57785bd6-4a85-4bad-b0bc-b2f00698c655"
-        * required = true
-        * type = #string
-        * initial.valueString = "Anders namelijk"
-        * enableWhen[+].question = "e8c4b0a4-bab9-4849-a52d-aa89b2be4c7c"
-        * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Anders, namelijk"
-
       // Solatol
       // Dosering
 //       var SolatolDosering2 = "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f"
@@ -583,15 +509,6 @@ Usage: #example
         * extension[+]
           * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
           * valueString = "Anders, namelijk"
-
-      * item[+]
-        * linkId = "02ee563f-b7a1-4713-875f-383e52297689"
-        * required = true
-        * type = #string
-        * initial.valueString = "Anders namelijk"
-        * enableWhen[+].question = "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f"
-        * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Anders, namelijk"
 
       * item[+]
         * linkId = "68f821a5-ed4d-4d35-8c94-cf6c8e962928"
