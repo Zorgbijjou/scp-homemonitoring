@@ -42,6 +42,7 @@ Usage: #example
 * item[=].answerOption[+].valueString = "Maandelijks"
 * item[=].answerOption[+].valueString = "Intensieve monitoring 7 dagen vanuit instelfase"
 * item[=].answerOption[+].valueString = "Intensieve monitoring 7 dagen vanuit reguliere monitoring"
+* item[=].answerOption[+].valueString = "COPD in de kliniek"
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].extension[=].valueString = "Selecteer protocol"
 
