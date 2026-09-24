@@ -152,8 +152,8 @@ Usage: #example
 //   var Metroprolol2x = "Metroprolol kortwerkend - 2 tabletten"
 //   var Flecainide = "Flecainide kortwerkend - 1 tablet"
 //   var Flecainide2x = "Flecainide kortwerkend - 2 tabletten"
-//   var Solatol = "Solatol 1 tablet"
-//   var Solatol2x = "Solatol 2 tabletten"
+//   var Sotalol = "Sotalol 1 tablet"
+//   var Sotalol2x = "Sotalol 2 tabletten"
   
     * item[+]
       * linkId = "27f19772-d2fe-4d3e-8f93-ab16ad948a23"
@@ -166,8 +166,8 @@ Usage: #example
       * answerOption[+].valueString = "Metroprolol kortwerkend - 2 tabletten"
       * answerOption[+].valueString = "Flecainide kortwerkend - 1 tablet"
       * answerOption[+].valueString = "Flecainide kortwerkend - 2 tabletten"
-      * answerOption[+].valueString = "Solatol 1 tablet"
-      * answerOption[+].valueString = "Solatol 2 tabletten"
+      * answerOption[+].valueString = "Sotalol 1 tablet"
+      * answerOption[+].valueString = "Sotalol 2 tabletten"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
         * valueString = "<style>div:has(> div[data-linkid=\"27f19772-d2fe-4d3e-8f93-ab16ad948a23\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Welke pill in the pocket?"
@@ -280,9 +280,9 @@ Usage: #example
         * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
         * valueString = "Anders, namelijk"
   
-  // Solatol
+  // Sotalol
   // Dosering
-//   var SolatolDosering = "805edc15-4336-4c26-bb89-d511a3d6d2ae"
+//   var SotalolDosering = "805edc15-4336-4c26-bb89-d511a3d6d2ae"
     * item[+]
       * linkId = "805edc15-4336-4c26-bb89-d511a3d6d2ae"
       * text = "Welke dosering?"
@@ -294,10 +294,10 @@ Usage: #example
       * enableBehavior = #any
       * enableWhen[+].question = "27f19772-d2fe-4d3e-8f93-ab16ad948a23"
       * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Solatol 1 tablet"
+      * enableWhen[=].answerString = "Sotalol 1 tablet"
       * enableWhen[+].question = "27f19772-d2fe-4d3e-8f93-ab16ad948a23"
       * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Solatol 2 tabletten"
+      * enableWhen[=].answerString = "Sotalol 2 tabletten"
       * answerOption[+].valueString = "40 mg"
       * answerOption[+].valueString = "80 mg"
       * extension[+]
@@ -314,10 +314,10 @@ Usage: #example
       * enableBehavior = #any
       * enableWhen[+].question = "27f19772-d2fe-4d3e-8f93-ab16ad948a23"
       * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Solatol 1 tablet" 
+      * enableWhen[=].answerString = "Sotalol 1 tablet" 
       * enableWhen[+].question = "27f19772-d2fe-4d3e-8f93-ab16ad948a23"
       * enableWhen[=].operator = #=
-      * enableWhen[=].answerString = "Solatol 2 tabletten"
+      * enableWhen[=].answerString = "Sotalol 2 tabletten"
 
     // ------------------------------------------
     // |    Tweede pill in the pocket magic     |
@@ -367,8 +367,8 @@ Usage: #example
         * answerOption[+].valueString = "Metroprolol kortwerkend - 2 tabletten"
         * answerOption[+].valueString = "Flecainide kortwerkend - 1 tablet"
         * answerOption[+].valueString = "Flecainide kortwerkend - 2 tabletten"
-        * answerOption[+].valueString = "Solatol 1 tablet"
-        * answerOption[+].valueString = "Solatol 2 tabletten"      
+        * answerOption[+].valueString = "Sotalol 1 tablet"
+        * answerOption[+].valueString = "Sotalol 2 tabletten"      
     
       // Verapamil
       // Dosering
@@ -483,9 +483,9 @@ Usage: #example
           * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
           * valueString = "Anders, namelijk"
 
-      // Solatol
+      // Sotalol
       // Dosering
-//       var SolatolDosering2 = "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f"
+//       var SotalolDosering2 = "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f"
       * item[+]
         * linkId = "ecb0e6e7-231d-4d57-ab96-3ab4b3cf513f"
         * text = "Welke dosering?"
@@ -497,10 +497,10 @@ Usage: #example
         * enableBehavior = #any
         * enableWhen[+].question = "485351f0-cb37-40ea-aed7-c27778d7f7bc"
         * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Solatol 1 tablet"
+        * enableWhen[=].answerString = "Sotalol 1 tablet"
         * enableWhen[+].question = "485351f0-cb37-40ea-aed7-c27778d7f7bc"
         * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Solatol 2 tabletten"
+        * enableWhen[=].answerString = "Sotalol 2 tabletten"
         * answerOption[+].valueString = "40 mg"
         * answerOption[+].valueString = "80 mg"
         * extension[+]
@@ -517,10 +517,10 @@ Usage: #example
         * enableBehavior = #any
         * enableWhen[+].question = "485351f0-cb37-40ea-aed7-c27778d7f7bc"
         * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Solatol 1 tablet" 
+        * enableWhen[=].answerString = "Sotalol 1 tablet" 
         * enableWhen[+].question = "485351f0-cb37-40ea-aed7-c27778d7f7bc"
         * enableWhen[=].operator = #=
-        * enableWhen[=].answerString = "Solatol 2 tabletten"
+        * enableWhen[=].answerString = "Sotalol 2 tabletten"
 
   * item[+]
     * linkId = "95bea39f-3a48-45c7-bd5c-e87d12e1afb5"

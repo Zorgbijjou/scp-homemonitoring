@@ -300,10 +300,10 @@
                   "valueString": "Flecainide kortwerkend - 2 tabletten"
                 },
                 {
-                  "valueString": "Solatol 1 tablet"
+                  "valueString": "Sotalol 1 tablet"
                 },
                 {
-                  "valueString": "Solatol 2 tabletten"
+                  "valueString": "Sotalol 2 tabletten"
                 }
               ],
               "extension": [
@@ -523,12 +523,12 @@
                 {
                   "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
                   "operator": "=",
-                  "answerString": "Solatol 1 tablet"
+                  "answerString": "Sotalol 1 tablet"
                 },
                 {
                   "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
                   "operator": "=",
-                  "answerString": "Solatol 2 tabletten"
+                  "answerString": "Sotalol 2 tabletten"
                 }
               ],
               "answerOption": [
@@ -549,12 +549,12 @@
                 {
                   "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
                   "operator": "=",
-                  "answerString": "Solatol 1 tablet"
+                  "answerString": "Sotalol 1 tablet"
                 },
                 {
                   "question": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
                   "operator": "=",
-                  "answerString": "Solatol 2 tabletten"
+                  "answerString": "Sotalol 2 tabletten"
                 }
               ]
             },
@@ -641,10 +641,10 @@
                       "valueString": "Flecainide kortwerkend - 2 tabletten"
                     },
                     {
-                      "valueString": "Solatol 1 tablet"
+                      "valueString": "Sotalol 1 tablet"
                     },
                     {
-                      "valueString": "Solatol 2 tabletten"
+                      "valueString": "Sotalol 2 tabletten"
                     }
                   ]
                 },
@@ -868,12 +868,12 @@
                     {
                       "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
                       "operator": "=",
-                      "answerString": "Solatol 1 tablet"
+                      "answerString": "Sotalol 1 tablet"
                     },
                     {
                       "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
                       "operator": "=",
-                      "answerString": "Solatol 2 tabletten"
+                      "answerString": "Sotalol 2 tabletten"
                     }
                   ],
                   "answerOption": [
@@ -894,12 +894,12 @@
                     {
                       "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
                       "operator": "=",
-                      "answerString": "Solatol 1 tablet"
+                      "answerString": "Sotalol 1 tablet"
                     },
                     {
                       "question": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
                       "operator": "=",
-                      "answerString": "Solatol 2 tabletten"
+                      "answerString": "Sotalol 2 tabletten"
                     }
                   ]
                 }
