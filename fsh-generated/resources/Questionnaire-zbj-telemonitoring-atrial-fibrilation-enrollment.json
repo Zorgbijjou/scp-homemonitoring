@@ -98,7 +98,7 @@
           "url": "expression",
           "valueExpression": {
             "language": "text/fhirpath",
-            "expression": "%resource.item.where(linkId='ff69bb6f-cbc2-48f2-9cae-d465c95e53d0').answer.valueBoolean = true"
+            "expression": "(%resource.item.where(linkId='ff69bb6f-cbc2-48f2-9cae-d465c95e53d0').answer.valueBoolean = true).not()"
           }
         },
         {
@@ -126,7 +126,7 @@
           "url": "expression",
           "valueExpression": {
             "language": "text/fhirpath",
-            "expression": "%resource.repeat(item).where(linkId='1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8').answer.valueBoolean = true and %resource.repeat(item).where(linkId='71fc98ad-2dba-4ecd-91d4-a70807dc72ac').answer.valueString = 'Pre-ECV'"
+            "expression": "(%resource.repeat(item).where(linkId='1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8').answer.valueBoolean = true and %resource.repeat(item).where(linkId='71fc98ad-2dba-4ecd-91d4-a70807dc72ac').answer.valueString = 'Pre-ECV').not()"
           }
         },
         {

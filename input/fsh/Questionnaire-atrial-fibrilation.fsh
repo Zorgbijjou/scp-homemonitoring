@@ -24,6 +24,8 @@ Usage: #example
 * useContext[=].valueCodeableConcept = $sct#49436004 "Boezemfibrilleren (aandoening)"
 
 // These extensions allow disabling submitting the entire form, there a complex beasts and a LLM was used to figure this out:
+// Per the FHIR spec a targetConstraint expression must evaluate to true when the answers are *valid*;
+// the form is blocked when it evaluates to false (smart-forms-renderer >= 1.4 follows this, 1.2.x was inverted).
 // Disable sending based on the Pacemaker question
 * extension[+]
   * url = "http://hl7.org/fhir/StructureDefinition/targetConstraint"
@@ -33,7 +35,7 @@ Usage: #example
   * extension[=].valueCode = #error
   * extension[+].url = "expression"
   * extension[=].valueExpression.language = #text/fhirpath
-  * extension[=].valueExpression.expression = "%resource.item.where(linkId='ff69bb6f-cbc2-48f2-9cae-d465c95e53d0').answer.valueBoolean = true"
+  * extension[=].valueExpression.expression = "(%resource.item.where(linkId='ff69bb6f-cbc2-48f2-9cae-d465c95e53d0').answer.valueBoolean = true).not()"
   * extension[+].url = "human"
   * extension[=].valueString = "Een patiënt met pacemaker komt niet in aanmerking voor thuismonitoring. Vervolg de zorg via het reguliere behandeltraject."
   * extension[+].url = "location"
@@ -50,8 +52,8 @@ Usage: #example
   * extension[=].valueCode = #error
   * extension[+].url = "expression"
   * extension[=].valueExpression.language = #text/fhirpath
-  // When Flutter == true and PAF == 'Pre-ECV'
-  * extension[=].valueExpression.expression = "%resource.repeat(item).where(linkId='1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8').answer.valueBoolean = true and %resource.repeat(item).where(linkId='71fc98ad-2dba-4ecd-91d4-a70807dc72ac').answer.valueString = 'Pre-ECV'"
+  // Blocked when Flutter == true and PAF == 'Pre-ECV'
+  * extension[=].valueExpression.expression = "(%resource.repeat(item).where(linkId='1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8').answer.valueBoolean = true and %resource.repeat(item).where(linkId='71fc98ad-2dba-4ecd-91d4-a70807dc72ac').answer.valueString = 'Pre-ECV').not()"
   * extension[+].url = "human"
   * extension[=].valueString = "Een patiënt met flutter of atriale tachycardie komt niet in aanmerking voor thuismonitoring. Vervolg de zorg via het reguliere behandeltraject."
   * extension[+].url = "location"
