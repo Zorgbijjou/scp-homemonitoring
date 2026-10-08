@@ -123,6 +123,7 @@ Usage: #example
       * valueCode = #vertical
     * answerOption[+].valueString = "Niets doen en afwachten"
     * answerOption[+].valueString = "Pill in the pocket innemen"
+    * answerOption[+].valueString = "Zie het EPD"
     * enableWhen[+].question = "71fc98ad-2dba-4ecd-91d4-a70807dc72ac"
     * enableWhen[=].operator = #=
     * enableWhen[=].answerString = "Paroxysmaal AF (PAF)"
