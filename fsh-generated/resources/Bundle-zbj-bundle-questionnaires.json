@@ -130,6 +130,14 @@
           {
             "linkId": "75ef8921-cfc9-4573-8ff0-99b650c860de",
             "text": "Gerelateerde ziekenhuisopname",
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                  "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
+                }
+              ]
+            },
             "type": "boolean",
             "initial": [
               {
@@ -147,10 +155,6 @@
                     }
                   ]
                 }
-              },
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
               }
             ]
           },
@@ -918,6 +922,14 @@
           {
             "linkId": "75ef8921-cfc9-4573-8ff0-99b650c860de",
             "text": "Gerelateerde ziekenhuisopname",
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                  "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
+                }
+              ]
+            },
             "type": "boolean",
             "initial": [
               {
@@ -935,10 +947,6 @@
                     }
                   ]
                 }
-              },
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                "valueString": "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
               }
             ]
           },
@@ -1604,6 +1612,14 @@
           {
             "linkId": "b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e",
             "text": "Meetprotocol",
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                  "valueString": "<style>div:has(> div > div > div > div > #choice-b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e) {  &, & > div { white-space: nowrap; } }</style>Meetprotocol"
+                }
+              ]
+            },
             "code": [
               {
                 "code": "243120004",
@@ -1640,10 +1656,6 @@
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
                 "valueString": "Selecteer protocol"
-              },
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                "valueString": "<style>div[data-linkid=\"b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e\"] > div > div:last-child > div {  &, & > div { max-width: 350px;} }</style>Meetprotocol"
               }
             ]
           },
