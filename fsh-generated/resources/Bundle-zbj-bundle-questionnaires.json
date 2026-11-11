@@ -1980,12 +1980,14 @@
                 ],
                 "linkId": "71fc98ad-2dba-4ecd-91d4-a70807dc72ac",
                 "text": "Meetprotocol",
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                    "valueString": "<style>div:has(> div[data-linkid=\"71fc98ad-2dba-4ecd-91d4-a70807dc72ac\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Meetprotocol"
-                  }
-                ],
+                "_text": {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                      "valueString": "<style>div:has(> div[data-linkid=\"71fc98ad-2dba-4ecd-91d4-a70807dc72ac\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Meetprotocol"
+                    }
+                  ]
+                },
                 "type": "choice",
                 "required": true,
                 "answerOption": [
@@ -2073,7 +2075,6 @@
                 "item": [
                   {
                     "linkId": "27f19772-d2fe-4d3e-8f93-ab16ad948a23",
-                    "text": "Welke pill in the pocket?",
                     "required": true,
                     "type": "choice",
                     "answerOption": [
@@ -2102,12 +2103,15 @@
                         "valueString": "Sotalol 2 tabletten"
                       }
                     ],
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                        "valueString": "<style>div:has(> div[data-linkid=\"27f19772-d2fe-4d3e-8f93-ab16ad948a23\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Welke pill in the pocket?"
-                      }
-                    ]
+                    "text": "Welke pill in the pocket?",
+                    "_text": {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                          "valueString": "<style>div:has(> div[data-linkid=\"27f19772-d2fe-4d3e-8f93-ab16ad948a23\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Welke pill in the pocket?"
+                        }
+                      ]
+                    }
                   },
                   {
                     "linkId": "134abd7b-b5da-482b-a794-9fa5b1025cfe",
@@ -2402,15 +2406,13 @@
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
                               "valueString": "font-weight: bold;"
+                            },
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                              "valueString": "<style>div:has(> div[data-linkid=\"836b1e03-129c-47e5-aeb8-dd788c1dc311\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
                             }
                           ]
-                        },
-                        "extension": [
-                          {
-                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                            "valueString": "<style>div:has(> div[data-linkid=\"836b1e03-129c-47e5-aeb8-dd788c1dc311\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
-                          }
-                        ]
+                        }
                       },
                       {
                         "linkId": "485351f0-cb37-40ea-aed7-c27778d7f7bc",
@@ -2446,17 +2448,12 @@
                       },
                       {
                         "linkId": "295f7d5f-97d8-4093-b925-45a83da854e2",
-                        "text": "Welke dosering?",
                         "required": true,
                         "type": "open-choice",
                         "extension": [
                           {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                             "valueCode": "vertical"
-                          },
-                          {
-                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                            "valueString": "Anders, namelijk <br /> "
                           },
                           {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -2494,7 +2491,16 @@
                           {
                             "valueString": "80 mg"
                           }
-                        ]
+                        ],
+                        "text": "Welke dosering?",
+                        "_text": {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                              "valueString": "Anders, namelijk <br /> "
+                            }
+                          ]
+                        }
                       },
                       {
                         "linkId": "6d28a3e1-5fb9-43d0-92d3-84860c8a1a75",
@@ -2755,15 +2761,17 @@
                 "item": [
                   {
                     "linkId": "1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8",
-                    "text": "Heeft de patiënt een flutter of atriale tachycardie?",
                     "required": true,
                     "type": "boolean",
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                        "valueString": "<style>div:has(> div[data-linkid=\"1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Heeft de patiënt een flutter of atriale tachycardie?"
-                      }
-                    ]
+                    "text": "Heeft de patiënt een flutter of atriale tachycardie?",
+                    "_text": {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                          "valueString": "<style>div:has(> div[data-linkid=\"1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Heeft de patiënt een flutter of atriale tachycardie?"
+                        }
+                      ]
+                    }
                   },
                   {
                     "linkId": "e918123c-c6db-42f6-a30c-3df41280ee15",
@@ -2843,7 +2851,6 @@
                   },
                   {
                     "linkId": "d88c5d33-a24a-42db-a708-418bbefc0efc",
-                    "text": "",
                     "type": "choice",
                     "answerOption": [
                       {
@@ -2861,12 +2868,17 @@
                             }
                           ]
                         }
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-                        "valueString": "<style>div:has(> div[data-linkid=\"d88c5d33-a24a-42db-a708-418bbefc0efc\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
                       }
-                    ]
+                    ],
+                    "text": "",
+                    "_text": {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                          "valueString": "<style>div:has(> div[data-linkid=\"d88c5d33-a24a-42db-a708-418bbefc0efc\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
+                        }
+                      ]
+                    }
                   }
                 ]
               },
