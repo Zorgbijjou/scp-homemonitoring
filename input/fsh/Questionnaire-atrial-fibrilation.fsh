@@ -92,9 +92,9 @@ Usage: #example
     * code = $sct#243120004 "Protocolvraag (regime/therapie)"
     * linkId = "71fc98ad-2dba-4ecd-91d4-a70807dc72ac"
     * text = "Meetprotocol"
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-      * valueString = "<style>div:has(> div[data-linkid=\"71fc98ad-2dba-4ecd-91d4-a70807dc72ac\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Meetprotocol"
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+        * valueString = "<style>div:has(> div[data-linkid=\"71fc98ad-2dba-4ecd-91d4-a70807dc72ac\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Meetprotocol"
     * type = #choice
     * required = true
     * answerOption[+].valueString = "Paroxysmaal AF (PAF)"
@@ -160,7 +160,6 @@ Usage: #example
   
     * item[+]
       * linkId = "27f19772-d2fe-4d3e-8f93-ab16ad948a23"
-      * text = "Welke pill in the pocket?"
       * required = true
       * type = #choice
       * answerOption[+].valueString = "Verapamil kortwerkend - 1 tablet"
@@ -171,10 +170,11 @@ Usage: #example
       * answerOption[+].valueString = "Flecainide kortwerkend - 2 tabletten"
       * answerOption[+].valueString = "Sotalol 1 tablet"
       * answerOption[+].valueString = "Sotalol 2 tabletten"
-      * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-        * valueString = "<style>div:has(> div[data-linkid=\"27f19772-d2fe-4d3e-8f93-ab16ad948a23\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Welke pill in the pocket?"
-   
+      * text = "Welke pill in the pocket?"
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+          * valueString = "<style>div:has(> div[data-linkid=\"27f19772-d2fe-4d3e-8f93-ab16ad948a23\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Welke pill in the pocket?"
+    
 
   
   // Verapamil
@@ -352,12 +352,12 @@ Usage: #example
         * linkId = "836b1e03-129c-47e5-aeb8-dd788c1dc311"
         * type = #display
         * text = ""
-        * text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-style"
-        * text.extension[=].valueString = "font-weight: bold;"
-        * extension[+]
-          * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-          * valueString = "<style>div:has(> div[data-linkid=\"836b1e03-129c-47e5-aeb8-dd788c1dc311\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
-    
+          * extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-style"
+          * extension[=].valueString = "font-weight: bold;"
+          * extension[+]
+            * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+            * valueString = "<style>div:has(> div[data-linkid=\"836b1e03-129c-47e5-aeb8-dd788c1dc311\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
+      
 //       var TweedePillInPocket = "485351f0-cb37-40ea-aed7-c27778d7f7bc"
       * item[+]
         * linkId = "485351f0-cb37-40ea-aed7-c27778d7f7bc"
@@ -378,7 +378,6 @@ Usage: #example
 //       var VeraDossering2 = "295f7d5f-97d8-4093-b925-45a83da854e2"
       * item[+]
         * linkId = "295f7d5f-97d8-4093-b925-45a83da854e2" 
-        * text = "Welke dosering?"
         * required = true
         * type = #open-choice
         * extension[+]  
@@ -393,9 +392,10 @@ Usage: #example
         * enableWhen[=].answerString = "Verapamil kortwerkend - 2 tabletten"
         * answerOption[+].valueString = "40 mg"
         * answerOption[+].valueString = "80 mg"  
-        * extension[+]
-          * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-          * valueString = "Anders, namelijk <br /> "
+        * text = "Welke dosering?"
+          * extension[+]
+            * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+            * valueString = "Anders, namelijk <br /> "
       
         * extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -559,12 +559,12 @@ Usage: #example
 //     var tachyCardia = "1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8"
     * item[+]
       * linkId = "1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8"
-      * text = "Heeft de patiënt een flutter of atriale tachycardie?"
       * required = true
       * type = #boolean
-      * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-        * valueString = "<style>div:has(> div[data-linkid=\"1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Heeft de patiënt een flutter of atriale tachycardie?"
+      * text = "Heeft de patiënt een flutter of atriale tachycardie?"
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+          * valueString = "<style>div:has(> div[data-linkid=\"1f14f9d4-12e5-4cff-a226-65b4bd9d9ba8\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>Heeft de patiënt een flutter of atriale tachycardie?"
     
 //     var DatumIsNogNietBekend = "Datum ECV is nog niet bekend"
 //     var DatumECVUnkown = "4721a5b7-8343-4bde-9b4b-50da53c29178"
@@ -623,15 +623,15 @@ Usage: #example
 
     * item[+]
       * linkId = "d88c5d33-a24a-42db-a708-418bbefc0efc"
-      * text = ""
       * type = #choice
       * answerOption.valueString = "Datum is nog niet bekend"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept = $questionnaire-item-control#check-box
-      * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-        * valueString = "<style>div:has(> div[data-linkid=\"d88c5d33-a24a-42db-a708-418bbefc0efc\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
+      * text = ""
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+          * valueString = "<style>div:has(> div[data-linkid=\"d88c5d33-a24a-42db-a708-418bbefc0efc\"]) { padding: 0; overflow: visible; box-shadow: none; background-color: unset; } }</style>"
 
 
   // -------------------------

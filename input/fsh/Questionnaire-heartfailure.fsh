@@ -38,9 +38,9 @@ Usage: #example
 * item[=].initial.valueBoolean = false
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].extension[=].valueCodeableConcept = $questionnaire-item-control#check-box
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+* item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
 // Custom rendering since FHIR Questionnaire does not support labels next to boolean checkboxes
-* item[=].extension[=].valueString = "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
+* item[=].text.extension[=].valueString = "<style>label:has(#boolean-75ef8921-cfc9-4573-8ff0-99b650c860de)::after {content: 'Ja, de patiënt start de thuismonitoring na gerelateerde ziekenhuisopname';}</style>Gerelateerde ziekenhuisopname"
 
 * item[+].linkId = "274e66c7-1e60-4075-bcde-1d11876e3897"
 * item[=].text = "Meetprotocol"

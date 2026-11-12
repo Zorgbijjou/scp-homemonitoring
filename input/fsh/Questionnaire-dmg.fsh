@@ -44,8 +44,8 @@ Usage: #example
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/entryFormat"
 * item[=].extension[=].valueString = "Selecteer protocol"
 // Custom rendering to set a custom width for this choice only to prevent wrapping of the answer options.
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
-* item[=].extension[=].valueString = "<style>div[data-linkid=\"b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e\"] > div > div:last-child > div {  &, & > div { max-width: 350px;} }</style>Meetprotocol"
+* item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+* item[=].text.extension[=].valueString = "<style>div:has(> div > div > div > div > #choice-b2f4d6e8-5c7a-9b3f-0d1e-2c4f6b8d0a3e) {  &, & > div { white-space: nowrap; } }</style>Meetprotocol"
 
 
 * item[+].linkId = "7cc84231-040b-49b4-beff-64ca901f776c" //extra-parameters
